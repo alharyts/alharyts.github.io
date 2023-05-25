@@ -1132,6 +1132,10 @@ video {
   padding-top: 1rem;
 }
 
+.text-left {
+  text-align: left;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1158,6 +1162,11 @@ video {
   line-height: 2.25rem;
 }
 
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -1181,21 +1190,6 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-6xl {
-  font-size: 3.75rem;
-  line-height: 1;
-}
-
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
 }
 
 .font-\[600\] {
@@ -1518,24 +1512,12 @@ section::before {
     width: 120px;
   }
 
-  .lg\:w-\[320px\] {
-    width: 320px;
+  .lg\:w-\[430px\] {
+    width: 430px;
   }
 
   .lg\:w-\[450px\] {
     width: 450px;
-  }
-
-  .lg\:w-\[400px\] {
-    width: 400px;
-  }
-
-  .lg\:w-\[420px\] {
-    width: 420px;
-  }
-
-  .lg\:w-\[430px\] {
-    width: 430px;
   }
 
   .lg\:grid-cols-3 {
@@ -1579,6 +1561,10 @@ section::before {
     padding-bottom: 6rem;
   }
 
+  .lg\:text-justify {
+    text-align: justify;
+  }
+
   .lg\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -1592,9 +1578,5 @@ section::before {
   .lg\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
-  }
-
-  .lg\:font-extrabold {
-    font-weight: 800;
   }
 }
