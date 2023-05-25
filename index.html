@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dist/output.css">
+    <title>My Portfolio | Atyla Azfa Al Harits</title>
+    <script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Poppins:wght@200;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+
+</head>
+
+<body class="overflow-x-hidden" style="background: linear-gradient(#2b1055, #7597de);">
+    <section id="quotes-section"
+        class="select-none relative w-full h-[100vh] p-5 lg:p-[100px] flex justify-center items-center overflow-hidden before:absolute before:bottom-0 before:w-full before:h-[100px] before:z-[1000]"
+        style="content: '';">
+        <img class="absolute top-0 left-0 w-full h-full object-cover pointer-events-none" src="dist/img/stars.png"
+            id="stars">
+        <div class="sun" id="sun"></div>
+        <label for="moon">
+            <img class="absolute top-0 left-0 w-full h-full object-cover mix-blend-screen" src="dist/img/moon.png"
+                id="moons">
+        </label>
+        <input type="checkbox" name="" id="moon" class="hidden">
+        <img class="absolute top-0 left-0 w-full h-full object-cover pointer-events-none"
+            src="dist/img/mountains_behind.png" id="mountains_behind">
+        <img class="absolute top-0 left-0 w-full h-full object-cover pointer-events-none z-10"
+            src="dist/img/mountains_front.png" id="mountains_front">
+        <figure id="myQuotes" class="max-w-screen-sm mt-3 lg:-mt-12 mx-auto z-[1001]">
+            <blockquote>
+                <p
+                    class="text-5xl lg:text-6xl text-center font-extrabold font-poppins text-white -mt-0 lg:mt-0 leading-5 select-text elements">
+                    My Portfolio
+                </p>
+            </blockquote>
+            <div class="flex justify-center top-16 relative animate-bounce">
+                <a href="#hero-section">
+                    <div
+                        class="flex justify-center bg-white text-center h-8 w-8 items-center rounded-full text-yellow-500">
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                </a>
+            </div>
+        </figure>
+    </section>
+    <section id="portfolio" class="px-5 lg:px-10 bg-dark" style="background-image: url('./dist/img/stars.png');
+    animation: backgroundScroll 70s linear infinite;">
+        <section id="hero-section">
+            <div class="container">
+                <div class="flex flex-wrap py-20 lg:py-24 text-white" id="sec">
+                    <div class="w-full self-center lg:w-1/2">
+                        <div class="bg-gradient-to-r from-indigo-500 to-pink-500 rounded-md inline-block mb-4">
+                            <h2 class="text-lg font-mono font-semibold py-0.5 px-2">Hi There I'm Atyla👋</h2>
+                        </div>
+                        <h1 class="text-3xl lg:text-5xl font-extrabold font-poppins">A <span
+                                class="font-extrabold font-poppins bg-gradient-to-r from-indigo-500 to-pink-500 bg-clip-text text-transparent">Backend
+                                Engineer.</span>
+                            <p></p> I Help Startup <span
+                                class="font-extrabold font-poppins bg-gradient-to-r from-indigo-500 to-pink-500 bg-clip-text text-transparent">Launch</span>
+                            And <span
+                                class="font-extrabold font-poppins bg-gradient-to-r from-indigo-500 to-pink-500 bg-clip-text text-transparent">Grow</span>
+                            Their
+                            Products
+                        </h1>
+                        <div class="mt-5 text-base font-[600]">
+                            <p>Dalam kehidupan sehari-hari, saya memiliki ketertarikan yang mendalam terhadap dunia logika. Hal ini juga tercermin dalam minat saya dalam dunia pemrograman, yang mendorong saya untuk bercita-cita menjadi seorang backend developer yang sangat terampil.</p>
+                            <div class="mt-7">
+                                <a href="./dist/Atyla_CV.pdf">
+                                    <button
+                                        class="py-2 px-4 bg-gradient-to-r from-indigo-500 to-pink-500 hover:from-pink-500 hover:to-indigo-500 rounded-lg mr-2"><i
+                                            class="fas fa-book"></i> Download CV</button>
+                                </a>
+                                <a href="https://github.com/alharyts">
+                                    <button
+                                        class="py-2 px-4 bg-gradient-to-r from-indigo-500 to-pink-500 hover:from-pink-500 hover:to-indigo-500 rounded-lg"><i
+                                            class="fab fa-github"></i> My
+                                        Github</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full self-end lg:w-1/2 hidden lg:block">
+                        <div class="relative lg:right-0 mt-10 lg:mt-9">
+                            <span class="absolute bottom-0 left-1/2 -translate-x-1/2 md:scale-125">
+                                <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill="#6366f1"
+                                            d="M31.4,-56C41.9,-48.3,52.4,-42.3,63.8,-33.3C75.2,-24.2,87.5,-12.1,88,0.3C88.4,12.6,77.1,25.3,67,36.7C56.9,48,48.2,58.1,37.2,67.2C26.3,76.2,13.1,84.2,0.8,82.8C-11.5,81.3,-23,70.5,-36.8,63.1C-50.6,55.8,-66.9,51.9,-76.5,41.9C-86.2,32,-89.4,16,-84.6,2.8C-79.8,-10.5,-67.1,-20.9,-58.7,-33.1C-50.3,-45.2,-46.2,-59.1,-37.1,-67.6C-28.1,-76.1,-14,-79.3,-1.8,-76.2C10.4,-73.1,20.9,-63.6,31.4,-56Z"
+                                            transform="translate(100 100) scale(1.1)" />
+                                    </svg>
+                                </svg>
+                            </span>
+                            <img src="./dist/img/astronaut2.png"
+                                class="mx-auto max-w-full lg:w-[430px] brightness-110 z-10 elements" alt="" srcset="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="about-section">
+            <div class="container">
+                <div class="flex flex-wrap py-3 text-white">
+                    <div class="w-full self-start lg:w-1/2 hidden lg:block">
+                        <div class="relative lg:right-0 mt-10 lg:mt-16">
+                            <span class="absolute bottom-0 left-1/2 -translate-x-1/2 md:scale-125">
+                                <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill="#6366f1"
+                                            d="M58.3,-60.6C69.9,-46.7,69.8,-23.3,66.6,-3.2C63.4,17,57.2,34,45.6,47.5C34,61.1,17,71.2,-1.1,72.2C-19.1,73.3,-38.2,65.3,-54.3,51.8C-70.3,38.2,-83.3,19.1,-82.5,0.8C-81.7,-17.6,-67.2,-35.2,-51.2,-49.1C-35.2,-63.1,-17.6,-73.5,2.9,-76.3C23.3,-79.2,46.7,-74.6,58.3,-60.6Z"
+                                            transform="translate(100 100) scale(1.1)" />
+                                    </svg>
+                                </svg>
+                            </span>
+                            <img src="./dist/img/astronaut1.png"
+                                class="mx-auto max-w-full lg:w-[450px] brightness-110 z-10 elements" alt="" srcset="">
+                        </div>
+                    </div>
+                    <div class="w-full self-center lg:w-1/2 text-justify">
+                        <h1 class="text-3xl lg:text-5xl font-extrabold font-poppins">About<span
+                                class="font-extrabold font-poppins bg-gradient-to-r from-indigo-500 to-pink-500 bg-clip-text text-transparent">
+                                Me</span>
+                            <p>
+                        </h1>
+                        <div class="mt-5 font-[600]">
+                            <p class="mb-4">
+                                Halo👋, saya Atyla A. Al Harits, saya adalah lulusan SMK jurusan RPL (Rekayasa Perangkat
+                                Lunak). Saya sangat
+                                tertarik pada dunia teknologi dan ingin memulai karir di bidang <span
+                                    class="bg-gradient-to-r from-indigo-500 to-pink-500 bg-clip-text text-transparent font-[600] font-poppins">Software
+                                    Enginner</span>
+                                dibagian <span
+                                    class="bg-gradient-to-r from-indigo-500 to-pink-500 bg-clip-text text-transparent font-[600] font-poppins">backend</span>.
+                                Saat belajar di SMK, saya telah mempelajari
+                                bahasa pemrograman seperti <span
+                                    class="bg-gradient-to-r from-indigo-500 to-pink-500 bg-clip-text text-transparent font-[600] font-poppins">JavaScript</span>
+                                dan <span
+                                    class="bg-gradient-to-r from-indigo-500 to-pink-500 bg-clip-text text-transparent font-[600] font-poppins">PHP</span>.
+                            </p>
+                            <p>
+                                Sekarang, saya sedang mencari kesempatan untuk bekerja atau magang di bidang teknologi
+                                untuk memperluas pengetahuan saya dan mengembangkan keterampilan saya dalam lingkungan
+                                kerja yang sesuai.
+                            </p>
+                            <div class="mt-4">
+                                <h6 class="mb-2">FOLLOW ME</h6>
+                                <div class="flex gap-2">
+                                    <a href=""
+                                        class="bg-gradient-to-r from-indigo-500 to-pink-500 rounded-full hover:from-pink-500 hover:to-indigo-500">
+                                        <button class="flex justify-center items-center h-10 w-10 ">
+                                            <i class="fab fa-instagram text-2xl"></i>
+                                        </button>
+                                    </a>
+                                    <a href=""
+                                        class="bg-gradient-to-r from-indigo-500 to-pink-500 rounded-full hover:from-pink-500 hover:to-indigo-500">
+                                        <button class="flex justify-center items-center h-10 w-10 ">
+                                            <i class="fab fa-twitter text-2xl"></i>
+                                        </button>
+                                    </a>
+                                    <a href=""
+                                        class="bg-gradient-to-r from-indigo-500 to-pink-500 rounded-full hover:from-pink-500 hover:to-indigo-500">
+                                        <button class="flex justify-center items-center h-10 w-10 ">
+                                            <i class="fab fa-linkedin-in text-2xl"></i>
+                                        </button>
+                                    </a>
+                                    <a href=""
+                                        class="bg-gradient-to-r from-indigo-500 to-pink-500 rounded-full hover:from-pink-500 hover:to-indigo-500">
+                                        <button class="flex justify-center items-center h-10 w-10 ">
+                                            <i class="fab fa-tiktok text-2xl"></i>
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section id="technicalSkill-section">
+            <div class="flex justify-center">
+                <div class="mt-20">
+                    <h1 class="text-3xl lg:text-5xl font-extrabold font-poppins text-white"><span
+                            class="font-extrabold font-poppins bg-gradient-to-r from-indigo-500 to-pink-500 bg-clip-text text-transparent">Technical</span>
+                        Skills</h1>
+                </div>
+            </div>
+            <div class="flex justify-center text-center mx-0 lg:mx-60 text-white mt-5 mb-10 font-[600] ">
+                <p>Kemampuan teknis ini adalah hasil dari pembelajaran saya selama bersekolah di SMK, dan saya sering menggunakan tech stack berikut ini untuk membuat aplikasi dengan baik</p>
+            </div>
+            <div class="flex justify-center">
+                <div class="grid grid-cols-4 gap-x-10 gap-y-10 lg:gap-x-20 lg:gap-y-24">
+                    <div class="flex justify-center items-center flex-col relative bottom-1 text-white text-sm">
+                        <img src="./dist/img/html.png" alt="" srcset="" class="w-12 lg:w-14">
+                        HTML
+                    </div>
+                    <div class="flex justify-center items-center flex-col relative bottom-1 text-white text-sm">
+                        <img src="./dist/img/css.png" alt="" srcset="" class="w-12 lg:w-14">
+                        CSS
+                    </div>
+                    <div class="flex justify-center items-center flex-col text-white text-sm">
+                        <img src="./dist/img/javascript.png" alt="" srcset="" class="w-10 lg:w-12 rounded-md">
+                        JavaScript
+                    </div>
+                    <div class="flex justify-center items-center flex-col text-white text-sm">
+                        <img src="./dist/img/php.png" alt="" srcset="" class="w-14 lg:w-16 pb-2.5">
+                        PHP
+                    </div>
+                    <div class="flex justify-center items-center flex-col text-white text-sm">
+                        <img src="./dist/img/laravel.png" alt="" srcset="" class="w-10 lg:w-12">
+                        Laravel
+                    </div>
+                    <div
+                        class="flex justify-center items-center flex-col relative top-3.5 lg:top-1 text-white text-sm text-center">
+                        <img src="./dist/img/tailwindcss.png" alt="" srcset="" class="w-12 lg:w-14 pb-1.5">
+                        Tailwind CSS
+                    </div>
+                    <div class="flex justify-center items-center flex-col text-white text-sm">
+                        <img src="./dist/img/bootstrap.png" alt="" srcset="" class="w-12 lg:w-14">
+                        Bootstrap
+                    </div>
+                    <div class="flex justify-center items-center flex-col relative bottom-1 text-white text-sm">
+                        <img src="./dist/img/mysql.png" alt="" srcset="" class="w-12 lg:w-14 pb-2.5">
+                        MySQL
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="internshipExperience-section">
+            <div class="flex justify-center">
+                <div class="mt-20">
+                    <h1 class="text-3xl lg:text-5xl font-extrabold font-poppins text-white">Internship <span
+                            class="font-extrabold font-poppins bg-gradient-to-r from-indigo-500 to-pink-500 bg-clip-text text-transparent">Experience</span>
+                    </h1>
+                </div>
+            </div>
+            <div class="flex justify-center text-center mx-0 lg:mx-60 text-white mt-5 mb-10 font-[600] ">
+                <p>Ini adalah pengalaman magang saya di sebuah perusahaan, di mana saya mendapatkan kesempatan berharga untuk belajar dan berkembang</p>
+            </div>
+            <div class="text-center mx-0 lg:mx-40 outline outline-1 outline-white rounded-lg bg-white bg-opacity-10 px-6 py-5">
+                <div class="flex flex-wrap">
+                    <div class="self-center w-[30rem] mr-0 lg:mr-28">
+                        <div class="text-white text-justify">
+                            <img src="./dist/img/mutiara.png" alt="" class="w-32 mb-4 block lg:hidden mx-auto">
+                            <h1 class="text-2xl lg:text-3xl font-bold font-poppins">Mutiara Digital Printing</h1>
+                            <p class="mb-3 font-medium">Design and printing service</p>
+                            <p class="font-medium">(7 February - 30 April 2022)</p>
+                            <p>Saya ditugaskan oleh sekolah untuk menjalani magang di perusahaan ini. Selama magang tersebut, saya berhasil mengembangkan sebuah aplikasi toko online sederhana berbasis web menggunakan Codeigniter 4 sebagai bukti penerapan pengetahuan yang kami peroleh selama magang.</p>
+                            <p class="font-bold mt-3">Alamat Perusahaan:</p>
+                            <p>Jl. Perintis Kemerdekaan No.31, Banjar, Kec. Banjar, Kota Banjar, Jawa Barat 46311</p>
+                            <p class="font-bold mt-3">Peran:</p>
+                            <li>Employee assistant</li>
+                            <li>Printing Machine Operator</li>
+                            <p class="font-bold mt-3">Nilai akhir: 87.0 (Baik)</p>
+                        </div>
+                    </div>
+                    <div class="self-end hidden lg:block">
+                        <img src="./dist/img/mutiara.png" alt="" class="w-44 -mt-72">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="quotesInspiration-section">
+            <div class="flex justify-center">
+                <div class="mt-20">
+                    <h1 class="text-3xl lg:text-5xl font-extrabold font-poppins text-white"><span
+                            class="font-extrabold font-poppins bg-gradient-to-r from-indigo-500 to-pink-500 bg-clip-text text-transparent">Inspirational</span>
+                        Quotes</h1>
+                </div>
+            </div>
+            <div class="flex justify-center text-center mx-0 lg:mx-60 text-white mt-5 mb-10 font-[600] ">
+                <p>Ini adalah kutipan favorit saya yang selalu membuat saya bersemangat dalam belajar dan ingat akan tujuan utama hidup saya</p>
+            </div>
+            <div class="flex justify-end mb-8">
+                <div
+                    class="bg-white text-sm bg-opacity-10 outline outline-2 outline-white w-full lg:w-1/2 rounded-lg px-3 py-3 text-white font-poppins font-medium">
+                    "Ambil risiko yang lebih besar dari apa yang dipikirkan oleh orang lain bahwa itu aman. Berilah
+                    perhatian yang lebih besar dari apa yang orang lain pikir lebih bijak. Lalu bermimpilah lebih dari
+                    apa yang orang lain pikir mimpi itu masuk akal."
+                    <p class="font-semibold mt-2 text-base">-Claude T Bissell</p>
+                </div>
+                <div class="flex justify-center items-center w-14 h-14 ml-3">
+                    <img src="./dist/img/claude-t-bissel.jpg" alt="" srcset=""
+                        class="w-14 rounded-full outline outline-2 outline-white">
+                </div>
+            </div>
+            <div class="flex justify-start mb-8">
+                <div class="flex justify-center items-center w-14 h-14 mr-3">
+                    <img src="./dist/img/john-ruskin.jpg" alt="" srcset=""
+                        class="w-14 rounded-full outline outline-2 outline-white">
+                </div>
+                <div
+                    class="bg-white text-sm bg-opacity-10 outline outline-2 outline-white w-full lg:w-1/2 rounded-lg px-3 py-3 text-white font-poppins font-medium">
+                    "Penghargaan paling tinggi bagi seorang pekerja keras bukanlah apa yang dia peroleh dari pekerjaan
+                    itu, tapi seberapa berkembang ia dengan kerja kerasnya itu."
+                    <p class="font-semibold mt-2 text-base">-John Ruskin</p>
+                </div>
+            </div>
+            <div class="flex justify-end mb-8">
+                <div
+                    class="bg-white text-sm bg-opacity-10 outline outline-2 outline-white w-full lg:w-1/2 rounded-lg px-3 py-3 text-white font-poppins font-medium">
+                    "Satu-satunya cara untuk melakukan pekerjaan yang hebat adalah dengan mencintai apa yang kamu
+                    lakukan. Jika kamu belum menemukannya, teruslah mencari. Jangan puas."
+                    <p class="font-semibold mt-2 text-base">-Steve Jobs</p>
+                </div>
+                <div class="flex justify-center items-center w-14 h-14 ml-3">
+                    <img src="./dist/img/steve-jobs.jpg" alt="" srcset=""
+                        class="w-14 rounded-full outline outline-2 outline-white">
+                </div>
+            </div>
+            <div class="flex justify-start mb-8">
+                <div class="flex justify-center items-center w-14 h-14 mr-3">
+                    <img src="./dist/img/bian-dyson.jpg" alt="" srcset=""
+                        class="w-14 rounded-full outline outline-2 outline-white">
+                </div>
+                <div
+                    class="bg-white text-sm bg-opacity-10 outline outline-2 outline-white w-full lg:w-1/2 rounded-lg px-3 py-3 text-white font-poppins font-medium">
+                    "Janganlah pernah menyerah ketika kamu masih mampu berusaha lagi. Tidak ada kata berakhir sampai
+                    kamu berhenti mencoba."
+                    <p class="font-semibold mt-2 text-base">-Brian Dyson</p>
+                </div>
+            </div>
+        </section>
+        <section id="project-section">
+            <div class="flex justify-center">
+                <div class="mt-20">
+                    <h1 class="text-3xl lg:text-5xl font-extrabold font-poppins text-white">Latest <span
+                            class="font-extrabold font-poppins bg-gradient-to-r from-indigo-500 to-pink-500 bg-clip-text text-transparent">Project</span>
+                    </h1>
+                </div>
+            </div>
+            <div class="flex justify-center text-center mx-0 lg:mx-60 text-white mt-5 mb-10 font-[600] ">
+                <p>Project ini saya buat salama saya masih duduk dibangku SMK guna melatih kemampuan kemandirian dan logika pemrograman</p>
+            </div>
+            <div class="flex justify-start">
+                <div class="grid grid-cols-1 lg:grid-cols-3">
+                    <div class="w-full px-4">
+                        <div class="mb-10 overflow-hidden rounded-xl bg-white">
+                            <div class="group">
+                                <img src="./dist/img/apm.png" alt="Mechanical Keyboard"
+                                    class="w-full cursor-pointer transform transition duration-500 ease-in-out group-hover:scale-110" />
+                            </div>
+                            <div class="py-9 px-4">
+                                <h3>
+                                    <a href="https://github.com/alharyts/web-pengaduan-masyarakat"
+                                        class="inline-block truncate text-xl font-semibold cursor-pointer text-black bg-gradient-to-r hover:from-indigo-500 hover:to-pink-500 hover:text-transparent hover:bg-clip-text">Aplikasi Pengaduan Masyarakat</a>
+                                </h3>
+                                <span class="bg-red-300 text-white text-xs font-medium px-2.5 py-0.5 rounded">Laravel</span>
+                                <span class="bg-violet-300 text-white text-xs font-medium px-2.5 py-0.5 rounded">Bootstrap</span>
+                                <p class="mb-6 text-base font-medium font-poppins">Project Ujikom Layanan Pengaduan Masyarakat SMK Negeri 3 Banjar 2023.</p>
+                                <a href="https://github.com/alharyts/web-pengaduan-masyarakat"
+                                    class="rounded-lg py-2.5 px-4 bg-indigo-500 text-white font-medium bg-gradient-to-r from-indigo-500 to-pink-500 hover:from-pink-500 hover:to-indigo-500">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full px-4">
+                        <div class="mb-10 overflow-hidden rounded-xl bg-white">
+                            <div class="group">
+                                <img src="./dist/img/tokoonlinerpl.png" alt="Mechanical Keyboard"
+                                    class="w-full cursor-pointer transform transition duration-500 ease-in-out group-hover:scale-110" />
+                            </div>
+                            <div class="py-9 px-4">
+                                <h3>
+                                    <a href="https://github.com/alharyts/toko-online-rpl1"
+                                        class="inline-block truncate text-xl font-semibold cursor-pointer text-black bg-gradient-to-r hover:from-indigo-500 hover:to-pink-500 hover:text-transparent hover:bg-clip-text">Toko Online Project Jurusan</a>
+                                </h3>
+                                <span class="bg-red-300 text-white text-xs font-medium px-2.5 py-0.5 rounded">Laravel</span>
+                                <span class="bg-violet-300 text-white text-xs font-medium px-2.5 py-0.5 rounded">Bootstrap</span>
+                                <p class="mb-6 text-base font-medium font-poppins">Toko online tugas produktif 2022 XII RPL 1 SMK Negeri 3 Banjar</p>
+                                <a href="https://github.com/alharyts/toko-online-rpl1"
+                                    class="rounded-lg py-2.5 px-4 bg-indigo-500 text-white font-medium bg-gradient-to-r from-indigo-500 to-pink-500 hover:from-pink-500 hover:to-indigo-500">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full px-4">
+                        <div class="mb-10 overflow-hidden rounded-xl bg-white">
+                            <div class="group">
+                                <img src="https://source.unsplash.com/360x200?coding" alt="Mechanical Keyboard"
+                                    class="w-full cursor-pointer transform transition duration-500 ease-in-out group-hover:scale-110" />
+                            </div>
+                            <div class="py-9 px-4">
+                                <h3>
+                                    <a href="https://github.com/alharyts/toko-online-pkl"
+                                        class="inline-block truncate text-xl font-semibold cursor-pointer text-black bg-gradient-to-r hover:from-indigo-500 hover:to-pink-500 hover:text-transparent hover:bg-clip-text">Toko Online Hasil PKL</a>
+                                </h3>
+                                <span class="bg-red-300 text-white text-xs font-medium px-2.5 py-0.5 rounded">Codeigniter</span>
+                                <span class="bg-violet-300 text-white text-xs font-medium px-2.5 py-0.5 rounded">Bootstrap</span>
+                                <p class="mb-6 text-base font-medium font-poppins">Toko online hasil PKL di Mutiara Digital Printing - XI RPL 1 -SMK Negeri 3 Banjar</p>
+                                <a href="https://github.com/alharyts/toko-online-pkl"
+                                    class="rounded-lg py-2.5 px-4 bg-indigo-500 text-white font-medium bg-gradient-to-r from-indigo-500 to-pink-500 hover:from-pink-500 hover:to-indigo-500">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center pb-32 pt-2">
+                <button
+                    class="px-28 lg:px-32 py-2 outline outline-2 outline-white rounded-full text-white hover:bg-gradient-to-r hover:from-indigo-500 hover:to-pink-500 hover:outline-none font-semibold font-poppins">Show
+                    more</button>
+            </div>
+        </section>
+    </section>
+    <footer id="footer">
+        <div class="py-14 px-7 lg:px-10 bg-slate-800">
+            <div class="flex">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-x-0 gap-y-7 lg:gap-x-16 lg:gap-y-0">
+                    <div class="">
+                        <div class="flex justify-start">
+                            <div class="mb-7 lg:mb-5">
+                                <h1 class="text-3xl font-extrabold font-poppins text-white"><span
+                                        class="font-extrabold font-poppins text-white">Contact Me</span></h1>
+                            </div>
+                        </div>
+                        <div class="flex justify-start">
+                            <img class="rounded-full w-[100px] h-[100px] lg:w-[120px] lg:h-[120px] outline outline-2 outline-white mr-3 lg:mr-6"
+                                src="./dist/img/atyla.jpg" alt="" srcset="">
+                            <div class="flex flex-col">
+                                <div class="relative top-0 lg:top-2">
+                                    <h3 class="text-white text-xl font-semibold font-poppins">Atyla Azfa Al Harits</h3>
+                                    <span class="text-white">Hubungi Saya:</span>
+                                    <div class="grid grid-cols-2 text-white mt-2">
+                                        <a href="" class="text-sm font-poppins hover:text-blue-700"><i
+                                                class="fab fa-telegram-plane"></i> Telegram</a>
+                                        <a href="" class="text-sm font-poppins hover:text-blue-700"><i
+                                                class="fab fa-whatsapp"></i> Whatsapp</a>
+                                    </div>
+                                    <a href="" class="text-white text-sm font-poppins hover:text-blue-700"><i
+                                            class="far fa-envelope"></i> azfaalharits25@gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-start flex-col">
+                            <h6 class="text-white text-xl font-medium font-poppins pt-4 pb-0.5">Alamat</h6>
+                            <p class="text-white">Jl. Raya Banjar - Sidaharja</p>
+                            <p class="text-white">Ciamis, Indonesia (46385)</p>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="flex justify-start">
+                            <div class="mb-5">
+                                <h1 class="text-3xl font-extrabold font-poppins text-white"><span
+                                        class="font-extrabold font-poppins text-white">Social Media</span></h1>
+                            </div>
+                        </div>
+                        <div class="text-white inline-block">
+                            <a href="" class="block pb-1.5 hover:text-blue-700">Instagram</a>
+                            <a href="" class="block pb-1.5 hover:text-blue-700">Twitter</a>
+                            <a href="" class="block pb-1.5 hover:text-blue-700">Linkedin</a>
+                            <a href="" class="block pb-1.5 hover:text-blue-700">Tiktok</a>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="flex justify-start">
+                            <div class="mb-5">
+                                <h1 class="text-3xl font-extrabold font-poppins text-white"><span
+                                        class="font-extrabold font-poppins text-white">Tautan Menu</span></h1>
+                            </div>
+                        </div>
+                        <div class="text-white inline-block">
+                            <a href="" class="block pb-1.5 hover:text-blue-700">Home</a>
+                            <a href="" class="block pb-1.5 hover:text-blue-700">About Me</a>
+                            <a href="" class="block pb-1.5 hover:text-blue-700">Inspirational Quotes</a>
+                            <a href="" class="block pb-1.5 hover:text-blue-700">My Skills</a>
+                            <a href="" class="block pb-1.5 hover:text-blue-700">Latest Project</a>
+                            <a href="" class="block pb-1.5 hover:text-blue-700"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-slate-900">
+            <div class="flex justify-center py-4">
+                <span class="text-sm text-white">Made with ❤️ by <a href="https://github.com/alharyts"
+                        class="font-semibold hover:text-sky-500">Atyla A. Al Harits</a>, with <a
+                        href="https://tailwindcss.com/" class="font-semibold text-sky-500 hover:text-white">Tailwind
+                        CSS</a></span>
+            </div>
+        </div>
+    </footer>
+    <script src="./dist/js/script.js"></script>
+</body>
+
+</html>
