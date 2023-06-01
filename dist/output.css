@@ -986,19 +986,6 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-\[\] {
-  background-color: ;
-}
-
-.bg-\[\#\] {
-  background-color: #;
-}
-
-.bg-\[\#ccc\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(204 204 204 / var(--tw-bg-opacity));
-}
-
 .bg-opacity-10 {
   --tw-bg-opacity: 0.1;
 }
@@ -1283,6 +1270,10 @@ video {
 
 .outline-white {
   outline-color: #fff;
+}
+
+.outline-slate-300 {
+  outline-color: #cbd5e1;
 }
 
 .brightness-110 {

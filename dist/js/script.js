@@ -30,7 +30,6 @@ window.addEventListener('scroll', function() {
 
 // dark mode
 const html = document.querySelector('html');
-const moons = document.querySelector('#moon');
 const rightBtn = document.querySelector('#rightBtn');
 const sunny = document.querySelector('#sun');
 const night = document.querySelector('#night');
