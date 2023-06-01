@@ -1132,10 +1132,6 @@ video {
   padding-top: 1rem;
 }
 
-.text-left {
-  text-align: left;
-}
-
 .text-center {
   text-align: center;
 }
@@ -1210,6 +1206,10 @@ video {
 
 .font-semibold {
   font-weight: 600;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 .leading-5 {
@@ -1559,10 +1559,6 @@ section::before {
   .lg\:py-24 {
     padding-top: 6rem;
     padding-bottom: 6rem;
-  }
-
-  .lg\:text-justify {
-    text-align: justify;
   }
 
   .lg\:text-3xl {
