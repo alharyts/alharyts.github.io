@@ -55,3 +55,7 @@ section::before {
     background-position: -100vh -110vh;
   }
 }
+
+.bg-night{
+  background: linear-gradient(#2b1055, #7597de);
+}

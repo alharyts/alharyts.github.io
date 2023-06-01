@@ -30,38 +30,48 @@ window.addEventListener('scroll', function() {
 
 // dark mode
 const html = document.querySelector('html');
-const moons = document.querySelector('#moon')
+const moons = document.querySelector('#moon');
+const rightBtn = document.querySelector('#rightBtn');
 const sunny = document.querySelector('#sun');
-moons.addEventListener('click', function(){
-  if(moons.checked){
-    html.classList.add('dark');
-    localStorage.theme = 'dark';
-    sunny.classList.remove('sunny');
-    mountains_behind.classList.remove('mountains_behind');
-    mountains_front.classList.remove('mountains_front');
-  }else{
+const night = document.querySelector('#night');
+const afternoon = document.querySelector('#afternoon');
+rightBtn.addEventListener('click', function(e) {
+  if (html.classList.contains('dark')) {
     html.classList.remove('dark');
+    afternoon.classList.remove('hidden');
+    night.classList.add('hidden');
     localStorage.theme = 'light';
     sunny.classList.add('sunny');
     mountains_behind.classList.add('mountains_behind');
     mountains_front.classList.add('mountains_front');
+  } else {
+    html.classList.add('dark');
+    localStorage.theme = 'dark';
+    afternoon.classList.add('hidden');
+    night.classList.remove('hidden');
+    sunny.classList.remove('sunny');
+    mountains_behind.classList.remove('mountains_behind');
+    mountains_front.classList.remove('mountains_front');
   }
 });
 
-window.addEventListener('load', function() {
-  const theme = localStorage.theme;
-  if (theme === 'dark') {
+const theme = localStorage.theme;
+if (theme === 'dark') {
+    afternoon.classList.add('hidden');
+    night.classList.remove('hidden');
     html.classList.add('dark');
     moons.checked = true;
     sunny.classList.remove('sunny');
     mountains_behind.classList.remove('mountains_behind');
     mountains_front.classList.remove('mountains_front');
   } else {
+    afternoon.classList.remove('hidden');
+    night.classList.add('hidden');
     html.classList.remove('dark');
     moons.checked = false;
     sunny.classList.add('sunny');
     mountains_behind.classList.add('mountains_behind');
     mountains_front.classList.add('mountains_front');
   }
-});
+
 

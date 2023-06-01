@@ -560,6 +560,10 @@ video {
   pointer-events: none;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
@@ -576,12 +580,20 @@ video {
   bottom: 0.25rem;
 }
 
+.bottom-6 {
+  bottom: 1.5rem;
+}
+
 .left-0 {
   left: 0px;
 }
 
 .left-1\/2 {
   left: 50%;
+}
+
+.right-6 {
+  right: 1.5rem;
 }
 
 .top-0 {
@@ -606,6 +618,10 @@ video {
 
 .z-\[1001\] {
   z-index: 1001;
+}
+
+.z-\[999999\] {
+  z-index: 999999;
 }
 
 .mx-0 {
@@ -772,10 +788,6 @@ video {
 
 .w-\[100px\] {
   width: 100px;
-}
-
-.w-\[30rem\] {
-  width: 30rem;
 }
 
 .w-full {
@@ -974,6 +986,19 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-\[\] {
+  background-color: ;
+}
+
+.bg-\[\#\] {
+  background-color: #;
+}
+
+.bg-\[\#ccc\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(204 204 204 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-10 {
   --tw-bg-opacity: 0.1;
 }
@@ -1158,9 +1183,9 @@ video {
   line-height: 2.25rem;
 }
 
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .text-base {
@@ -1337,6 +1362,10 @@ section::before {
   }
 }
 
+.bg-night{
+  background: linear-gradient(#2b1055, #7597de);
+}
+
 .before\:absolute::before {
   content: var(--tw-content);
   position: absolute;
@@ -1360,6 +1389,11 @@ section::before {
 .before\:w-full::before {
   content: var(--tw-content);
   width: 100%;
+}
+
+.hover\:bg-blue-800:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 64 175 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-gradient-to-r:hover {
@@ -1422,10 +1456,23 @@ section::before {
 }
 
 @media (min-width: 768px) {
+  .md\:top-1 {
+    top: 0.25rem;
+  }
+
   .md\:scale-125 {
     --tw-scale-x: 1.25;
     --tw-scale-y: 1.25;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
   }
 }
 
@@ -1510,6 +1557,10 @@ section::before {
 
   .lg\:w-\[120px\] {
     width: 120px;
+  }
+
+  .lg\:w-\[30rem\] {
+    width: 30rem;
   }
 
   .lg\:w-\[430px\] {
