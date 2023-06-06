@@ -25,7 +25,7 @@
 
 <body class="overflow-x-hidden bg-night">
     <section id="quotes-section"
-        class="select-none relative w-full h-[100vh] p-5 lg:p-[100px] flex justify-center items-center overflow-hidden before:absolute before:bottom-0 before:w-full before:h-[100px] before:z-[1000]"
+        class="select-none relative w-full h-[100vh] p-5 lg:p-[100px] flex justify-center items-center overflow-hidden before:absolute before:bottom-0 before:w-full before:h-[100px] before:z-[1000] container mx-auto"
         style="content: '';">
         <img class="absolute top-0 left-0 w-full h-full object-cover pointer-events-none" src="dist/img/stars.png"
             id="stars">
@@ -53,7 +53,7 @@
             </div>
         </figure>
     </section>
-    <section id="portfolio" class="px-5 lg:px-10 bg-dark" style="background-image: url('./dist/img/stars.png');
+    <section id="portfolio" class="px-5 lg:px-10 bg-dark container mx-auto" style="background-image: url('./dist/img/stars.png');
     animation: backgroundScroll 70s linear infinite;">
         <section id="hero-section">
             <div class="container">
@@ -275,7 +275,7 @@
                 </div>
             </div>
         </section>
-        <section id="quotesInspiration-section">
+        <section id="quotesInspiration-section" class="lg:px-9">
             <div class="flex justify-center">
                 <div class="mt-20">
                     <h1 class="text-3xl lg:text-5xl font-extrabold font-poppins text-white"><span
@@ -432,7 +432,7 @@
             </div>
         </section>
     </section>
-    <footer id="footer">
+    <footer id="footer" class="container mx-auto">
         <div class="py-14 px-7 lg:px-10 bg-slate-800">
             <div class="flex">
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-x-0 gap-y-7 lg:gap-x-16 lg:gap-y-0">
@@ -458,7 +458,7 @@
                                             class="text-sm font-poppins hover:text-blue-700"><i
                                                 class="fab fa-whatsapp"></i> Whatsapp</a>
                                     </div>
-                                    <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCKCGDcmpFWQKzqldHRZszWPwDRqmxZGFfTjpMvShnRFMtVtJxrzKbwSXsrtCmnXGPfJPcPL"
+                                    <a href="mailto:azfaalharits25@gmail.com"
                                         class="text-white text-sm font-poppins hover:text-blue-700"><i
                                             class="far fa-envelope"></i> azfaalharits25@gmail.com</a>
                                 </div>
@@ -511,7 +511,7 @@
         </div>
         <div class="bg-slate-900">
             <div class="flex justify-center py-4">
-                <span class="text-sm text-white">Made with ❤️ by <a href="https://github.com/alharyts"
+                <span class="text-xs lg:text-lg text-white">Made with ❤️ by <a href="https://github.com/alharyts"
                         class="font-semibold hover:text-sky-500">Atyla A. Al Harits</a>, with <a
                         href="https://tailwindcss.com/" class="font-semibold text-sky-500 hover:text-white">Tailwind
                         CSS</a></span>
@@ -519,7 +519,7 @@
         </div>
     </footer>
  
-    <div class="fixed right-6 bottom-6 group z-[999999]">
+    <div class="fixed right-6 bottom-6 group z-[999999] ">
         <button type="button" id="rightBtn" class="flex items-center justify-center text-white bg-gradient-to-r from-indigo-500 to-pink-500 rounded-full w-14 h-14 hover:bg-blue-800 outline outline-2 outline-white">
             <svg xmlns="http://www.w3.org/2000/svg" id="night" class="" width="20" height="20" fill="currentColor" class="bi bi-moon-stars" viewBox="0 0 16 16">
                 <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"/>
