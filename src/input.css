@@ -56,6 +56,16 @@ section::before {
   }
 }
 
+.stars{
+  background-image: url('../dist/img/stars.png');
+  animation: backgroundScroll 70s linear infinite;
+}
+
 .bg-night{
   background: linear-gradient(#2b1055, #7597de);
+}
+
+.afternoon{
+  background-image: url('../dist/img/siang.jpg');
+  background-size: cover;
 }

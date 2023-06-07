@@ -624,6 +624,14 @@ video {
   z-index: 999999;
 }
 
+.z-\[100\] {
+  z-index: 100;
+}
+
+.z-\[9\] {
+  z-index: 9;
+}
+
 .mx-0 {
   margin-left: 0px;
   margin-right: 0px;
@@ -863,10 +871,6 @@ video {
   flex-wrap: wrap;
 }
 
-.content-normal {
-  align-content: normal;
-}
-
 .items-center {
   align-items: center;
 }
@@ -955,11 +959,6 @@ video {
   border-radius: 0.75rem;
 }
 
-.bg-dark {
-  --tw-bg-opacity: 1;
-  background-color: rgb(28 5 34 / var(--tw-bg-opacity));
-}
-
 .bg-indigo-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(99 102 241 / var(--tw-bg-opacity));
@@ -988,6 +987,16 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-slate-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
+}
+
+.bg-slate-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(51 65 85 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-10 {
@@ -1110,11 +1119,6 @@ video {
 .py-9 {
   padding-top: 2.25rem;
   padding-bottom: 2.25rem;
-}
-
-.px-0 {
-  padding-left: 0px;
-  padding-right: 0px;
 }
 
 .pb-0 {
@@ -1358,8 +1362,18 @@ section::before {
   }
 }
 
+.stars{
+  background-image: url('../dist/img/stars.png');
+  animation: backgroundScroll 70s linear infinite;
+}
+
 .bg-night{
   background: linear-gradient(#2b1055, #7597de);
+}
+
+.afternoon{
+  background-image: url('../dist/img/siang.jpg');
+  background-size: cover;
 }
 
 .before\:absolute::before {
@@ -1449,6 +1463,20 @@ section::before {
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+:is(.dark .dark\:z-\[9\]) {
+  z-index: 9;
+}
+
+:is(.dark .dark\:bg-dark) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(28 5 34 / var(--tw-bg-opacity));
+}
+
+:is(.dark .dark\:bg-slate-800) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 41 59 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 768px) {
@@ -1603,19 +1631,14 @@ section::before {
     padding-right: 8rem;
   }
 
-  .lg\:py-24 {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-  }
-
-  .lg\:px-7 {
-    padding-left: 1.75rem;
-    padding-right: 1.75rem;
-  }
-
   .lg\:px-9 {
     padding-left: 2.25rem;
     padding-right: 2.25rem;
+  }
+
+  .lg\:py-24 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   }
 
   .lg\:text-3xl {
@@ -1633,8 +1656,8 @@ section::before {
     line-height: 1;
   }
 
-  .lg\:text-lg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
+  .lg\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 }

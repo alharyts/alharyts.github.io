@@ -34,12 +34,15 @@ const rightBtn = document.querySelector('#rightBtn');
 const sunny = document.querySelector('#sun');
 const night = document.querySelector('#night');
 const afternoon = document.querySelector('#afternoon');
+const portfolio = document.querySelector('#portfolio');
 rightBtn.addEventListener('click', function(e) {
   if (html.classList.contains('dark')) {
     html.classList.remove('dark');
     afternoon.classList.remove('hidden');
     night.classList.add('hidden');
     localStorage.theme = 'light';
+    portfolio.classList.remove('stars');
+    portfolio.classList.add('afternoon');
     sunny.classList.add('sunny');
     mountains_behind.classList.add('mountains_behind');
     mountains_front.classList.add('mountains_front');
@@ -48,6 +51,8 @@ rightBtn.addEventListener('click', function(e) {
     localStorage.theme = 'dark';
     afternoon.classList.add('hidden');
     night.classList.remove('hidden');
+    portfolio.classList.add('stars');
+    portfolio.classList.remove('afternoon');
     sunny.classList.remove('sunny');
     mountains_behind.classList.remove('mountains_behind');
     mountains_front.classList.remove('mountains_front');
@@ -56,17 +61,21 @@ rightBtn.addEventListener('click', function(e) {
 
 const theme = localStorage.theme;
 if (theme === 'dark') {
-    afternoon.classList.add('hidden');
-    night.classList.remove('hidden');
-    html.classList.add('dark');
-    moons.checked = true;
-    sunny.classList.remove('sunny');
-    mountains_behind.classList.remove('mountains_behind');
-    mountains_front.classList.remove('mountains_front');
-  } else {
-    afternoon.classList.remove('hidden');
-    night.classList.add('hidden');
-    html.classList.remove('dark');
+  afternoon.classList.add('hidden');
+  night.classList.remove('hidden');
+  html.classList.add('dark');
+  portfolio.classList.add('stars');
+  portfolio.classList.remove('afternoon');
+  moons.checked = true;
+  sunny.classList.remove('sunny');
+  mountains_behind.classList.remove('mountains_behind');
+  mountains_front.classList.remove('mountains_front');
+} else {
+  afternoon.classList.remove('hidden');
+  night.classList.add('hidden');
+  html.classList.remove('dark');
+  portfolio.classList.remove('stars');
+  portfolio.classList.add('afternoon');
     moons.checked = false;
     sunny.classList.add('sunny');
     mountains_behind.classList.add('mountains_behind');
