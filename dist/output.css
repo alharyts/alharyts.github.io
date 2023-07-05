@@ -7,7 +7,6 @@
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
 */
 
-
 *,
 ::before,
 ::after {
@@ -625,14 +624,6 @@ video {
   z-index: 999999;
 }
 
-.z-\[100\] {
-  z-index: 100;
-}
-
-.z-\[9\] {
-  z-index: 9;
-}
-
 .mx-0 {
   margin-left: 0px;
   margin-right: 0px;
@@ -677,14 +668,6 @@ video {
 
 .mb-7 {
   margin-bottom: 1.75rem;
-}
-
-.mb-8 {
-  margin-bottom: 2rem;
-}
-
-.ml-3 {
-  margin-left: 0.75rem;
 }
 
 .mr-0 {
@@ -880,10 +863,6 @@ video {
   justify-content: flex-start;
 }
 
-.justify-end {
-  justify-content: flex-end;
-}
-
 .justify-center {
   justify-content: center;
 }
@@ -970,9 +949,9 @@ video {
   background-color: rgb(252 165 165 / var(--tw-bg-opacity));
 }
 
-.bg-slate-800 {
+.bg-slate-700 {
   --tw-bg-opacity: 1;
-  background-color: rgb(30 41 59 / var(--tw-bg-opacity));
+  background-color: rgb(51 65 85 / var(--tw-bg-opacity));
 }
 
 .bg-slate-900 {
@@ -988,16 +967,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-slate-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
-}
-
-.bg-slate-700 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(51 65 85 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-10 {
@@ -1045,11 +1014,6 @@ video {
 .px-28 {
   padding-left: 7rem;
   padding-right: 7rem;
-}
-
-.px-3 {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
 }
 
 .px-4 {
@@ -1363,18 +1327,13 @@ section::before {
   }
 }
 
-.stars{
+/* .stars{
   background-image: url('../dist/img/stars.png');
   animation: backgroundScroll 70s linear infinite;
-}
+} */
 
 .bg-night{
   background: linear-gradient(#2b1055, #7597de);
-}
-
-.afternoon{
-  background-image: url('../dist/img/siang.jpg');
-  background-size: cover;
 }
 
 .before\:absolute::before {
@@ -1478,6 +1437,11 @@ section::before {
 :is(.dark .dark\:bg-slate-800) {
   --tw-bg-opacity: 1;
   background-color: rgb(30 41 59 / var(--tw-bg-opacity));
+}
+
+:is(.dark .dark\:bg-slate-900) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 768px) {
@@ -1630,11 +1594,6 @@ section::before {
   .lg\:px-32 {
     padding-left: 8rem;
     padding-right: 8rem;
-  }
-
-  .lg\:px-9 {
-    padding-left: 2.25rem;
-    padding-right: 2.25rem;
   }
 
   .lg\:py-24 {
