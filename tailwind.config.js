@@ -6,6 +6,8 @@ module.exports = {
     extend: {
       fontFamily: {
         "poppins": "poppins, sans-serif",
+        "pacifico": "pacifico, cursive",
+        "inter": "inter"
       },
       KeyframesEffect: {
         slideUpDown: {
