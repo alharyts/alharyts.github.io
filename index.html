@@ -25,6 +25,50 @@
 </head>
 
 <body class="overflow-x-hidden bg-night">
+    <header
+        class="w-full fixed z-[2000] transition-colors duration-500 bg-white dark:bg-slate-800 bg-opacity-60 dark:bg-opacity-60">
+        <nav class="font-inter font-medium text-sm">
+            <div class="py-3 px-0 lg:px-7 flex lg:justify-between items-center lg:container lg:mx-auto">
+                <div class="flex justify-start items-center">
+                    <img src="https://flowbite.com/docs/images/logo.svg" alt="" srcset="" class="mr-2">
+                    <span class="font-poppins font-bold text-lg dark:text-white">ArtisanVerse</span>
+                </div>
+                <div id="toggleTarget"
+                    class="bg-white py-6 px-8 absolute right-6 top-20 lg:bg-transparent lg:static lg:py-0 lg:px-0 hidden lg:block">
+                    <a href="#"
+                        class="dark:text-white text-dark font-semibold ml-0 my-6 lg:my-0 lg:ml-8 hover:text-purple-500 dark:hover:text-cyan-400 block lg:inline">Home</a>
+                    <a href="#"
+                        class="dark:text-white text-dark font-semibold ml-0 my-6 lg:my-0 lg:ml-8 hover:text-purple-500 dark:hover:text-cyan-400 block lg:inline">About
+                        Me</a>
+                    <a href="#"
+                        class="dark:text-white text-dark font-semibold ml-0 my-6 lg:my-0 lg:ml-8 hover:text-purple-500 dark:hover:text-cyan-400 block lg:inline">Experience</a>
+                    <a href="#"
+                        class="dark:text-white text-dark font-semibold ml-0 my-6 lg:my-0 lg:ml-8 hover:text-purple-500 dark:hover:text-cyan-400 block lg:inline">Social
+                        Media</a>
+                    <a href="#"
+                        class="dark:text-white text-dark font-semibold ml-0 my-6 lg:my-0 lg:ml-8 hover:text-purple-500 dark:hover:text-cyan-400 block lg:inline">Project</a>
+                    <a href="#"
+                        class="dark:text-white text-dark font-semibold ml-0 my-6 lg:my-0 lg:ml-8 hover:text-purple-500 dark:hover:text-cyan-400 block lg:inline">Blog</a>
+                    <a href="#"
+                        class="dark:text-white text-dark font-semibold ml-0 my-6 lg:my-0 lg:ml-8 hover:text-purple-500 dark:hover:text-cyan-400 block lg:inline">Contact</a>
+                    <div class="flex lg:inline my-6 lg:my-0">
+                        <!-- <a href="<?= BASEURL ?>/auth/signin"
+                            class="dark:text-white font-semibold ml-0  lg:ml-8 cursor-pointer block lg:inline">
+                            <button
+                                class="py-2 px-5 outline outline-1 outline-purple-500 hover:outline-orange-500 hover:bg-orange-400 rounded-lg hover:text-white">Sign
+                                In</button>
+                        </a> -->
+                        <a href="#" class="text-white ml-5 cursor-pointer block lg:inline">
+                            <button
+                                class="py-2 px-5 outline outline-1 outline-purple-500 bg-purple-500 rounded-lg hover:bg-purple-400 hover:outline-purple-400">Sign In</button>
+                        </a>
+                    </div>
+                </div>
+                <button id="nav-toggle1" class="py-2 px-3 bg-purple-500 block lg:hidden" type="button">ppppp</button>
+            </div>
+        </nav>
+    </header>
+
     <section
         class="select-none relative w-full h-[100vh] p-5 lg:p-[100px] flex justify-center items-center overflow-hidden before:absolute before:bottom-0 before:w-full before:h-[100px] before:z-[1000] container mx-auto"
         style="content: '';">
@@ -113,7 +157,8 @@
                     <h2
                         class="font-extrabold font-poppins text-5xl tracking-tight text-black mb-8 dark:text-white mt-2">
                         Skills & Experience</h2>
-                    <p class="font-poppins mb-12 dark:text-white">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas iure
+                    <p class="font-poppins mb-12 dark:text-white">Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Quas iure
                         nulla suscipit maiores esse libero quis magni fugit? Dignissimos, maiores.</p>
                     <h2 class="font-pacifico text-2xl dark:text-white">My Skills</h2>
                     <hr class="mb-7 border-t-2 w-32 border-t-purple-500">
@@ -233,7 +278,8 @@
                     <h2
                         class="font-extrabold font-poppins text-5xl tracking-tight text-black mb-4 dark:text-white mt-2">
                         Mari Berkolaborasi</h2>
-                    <p class="px-0 lg:px-64 dark:text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa minus
+                    <p class="px-0 lg:px-64 dark:text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Ipsa minus
                         temporibus voluptatum mollitia vitae alias quisquam adipisci.</p>
                 </div>
                 <div class="flex justify-center mt-8 gap-7">
@@ -258,13 +304,15 @@
                     <h2
                         class="font-extrabold font-poppins text-5xl tracking-tight text-black mb-4 dark:text-white mt-2">
                         Project Unggulan</h2>
-                    <p class="px-0 lg:px-64 dark:text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa minus
+                    <p class="px-0 lg:px-64 dark:text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Ipsa minus
                         temporibus voluptatum mollitia vitae alias quisquam adipisci.</p>
                 </div>
                 <div class="flex justify-center mt-10">
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                         <div class="w-full px-4">
-                            <div class="mb-10 overflow-hidden rounded-xl bg-white dark:bg-slate-800 shadow-lg dark:shadow-slate-500">
+                            <div
+                                class="mb-10 overflow-hidden rounded-xl bg-white dark:bg-slate-800 shadow-lg dark:shadow-slate-500">
                                 <div class="group">
                                     <img src="./dist/img/apm.png" alt="Mechanical Keyboard"
                                         class="w-full cursor-pointer transform transition duration-500 ease-in-out group-hover:scale-110" />
@@ -279,7 +327,8 @@
                                         class="bg-red-300 text-white text-xs font-medium px-2.5 py-0.5 rounded">Laravel</span>
                                     <span
                                         class="bg-violet-300 text-white text-xs font-medium px-2.5 py-0.5 rounded">Bootstrap</span>
-                                    <p class="mb-6 text-base font-medium font-poppins dark:text-white">Project Ujikom Layanan Pengaduan
+                                    <p class="mb-6 text-base font-medium font-poppins dark:text-white">Project Ujikom
+                                        Layanan Pengaduan
                                         Masyarakat SMK Negeri 3 Banjar 2023.</p>
                                     <a href="https://github.com/alharyts/web-pengaduan-masyarakat"
                                         class="rounded-lg py-2.5 px-4 bg-indigo-500 text-white font-medium bg-gradient-to-r from-indigo-500 to-pink-500 hover:from-pink-500 hover:to-indigo-500">Source
@@ -288,7 +337,8 @@
                             </div>
                         </div>
                         <div class="w-full px-4">
-                            <div class="mb-10 overflow-hidden rounded-xl bg-white dark:bg-slate-800 shadow-lg dark:shadow-slate-500">
+                            <div
+                                class="mb-10 overflow-hidden rounded-xl bg-white dark:bg-slate-800 shadow-lg dark:shadow-slate-500">
                                 <div class="group">
                                     <img src="./dist/img/tokoonlinerpl.png" alt="Mechanical Keyboard"
                                         class="w-full cursor-pointer transform transition duration-500 ease-in-out group-hover:scale-110" />
@@ -303,7 +353,8 @@
                                         class="bg-red-300 text-white text-xs font-medium px-2.5 py-0.5 rounded">Laravel</span>
                                     <span
                                         class="bg-violet-300 text-white text-xs font-medium px-2.5 py-0.5 rounded">Bootstrap</span>
-                                    <p class="mb-6 text-base font-medium font-poppins dark:text-white">Toko online tugas produktif 2022
+                                    <p class="mb-6 text-base font-medium font-poppins dark:text-white">Toko online tugas
+                                        produktif 2022
                                         XII
                                         RPL 1 SMK Negeri 3 Banjar</p>
                                     <a href="https://github.com/alharyts/toko-online-rpl1"
@@ -313,7 +364,8 @@
                             </div>
                         </div>
                         <div class="w-full px-4">
-                            <div class="mb-10 overflow-hidden rounded-xl bg-white dark:bg-slate-800 shadow-lg dark:shadow-slate-500">
+                            <div
+                                class="mb-10 overflow-hidden rounded-xl bg-white dark:bg-slate-800 shadow-lg dark:shadow-slate-500">
                                 <div class="group">
                                     <img src="https://source.unsplash.com/360x200?coding" alt="Mechanical Keyboard"
                                         class="w-full cursor-pointer transform transition duration-500 ease-in-out group-hover:scale-110" />
@@ -328,7 +380,8 @@
                                         class="bg-red-300 text-white text-xs font-medium px-2.5 py-0.5 rounded">Codeigniter</span>
                                     <span
                                         class="bg-violet-300 text-white text-xs font-medium px-2.5 py-0.5 rounded">Bootstrap</span>
-                                    <p class="mb-6 text-base font-medium font-poppins dark:text-white">Toko online hasil PKL di Mutiara
+                                    <p class="mb-6 text-base font-medium font-poppins dark:text-white">Toko online hasil
+                                        PKL di Mutiara
                                         Digital Printing - XI RPL 1 -SMK Negeri 3 Banjar</p>
                                     <a href="https://github.com/alharyts/toko-online-pkl"
                                         class="rounded-lg py-2.5 px-4 bg-indigo-500 text-white font-medium bg-gradient-to-r from-indigo-500 to-pink-500 hover:from-pink-500 hover:to-indigo-500">Source
@@ -348,13 +401,15 @@
                     <h2
                         class="font-extrabold font-poppins text-5xl tracking-tight text-black mb-4 dark:text-white mt-2">
                         Artikel Terbaru</h2>
-                    <p class="px-0 lg:px-64 dark:text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa minus
+                    <p class="px-0 lg:px-64 dark:text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Ipsa minus
                         temporibus voluptatum mollitia vitae alias quisquam adipisci.</p>
                 </div>
                 <div class="flex justify-center mt-10">
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                         <div class="w-full px-4">
-                            <div class="mb-10 overflow-hidden rounded-xl shadow-lg shadow-slate-300 dark:shadow-slate-500">
+                            <div
+                                class="mb-10 overflow-hidden rounded-xl shadow-lg shadow-slate-300 dark:shadow-slate-500">
                                 <div class="group">
                                     <img src="https://source.unsplash.com/360x200?coding" alt="Mechanical Keyboard"
                                         class="w-full cursor-pointer transform transition duration-500 ease-in-out group-hover:scale-110" />
@@ -370,13 +425,15 @@
                             </div>
                         </div>
                         <div class="w-full px-4">
-                            <div class="mb-10 overflow-hidden rounded-xl shadow-lg shadow-slate-300 dark:shadow-slate-500">
+                            <div
+                                class="mb-10 overflow-hidden rounded-xl shadow-lg shadow-slate-300 dark:shadow-slate-500">
                                 <div class="group">
                                     <img src="https://source.unsplash.com/360x200?coffee" alt="Mechanical Keyboard"
                                         class="w-full cursor-pointer transform transition duration-500 ease-in-out group-hover:scale-110" />
                                 </div>
                                 <div class="py-4 px-2">
-                                    <p class="font-poppins text-sm my-1 font-medium dark:text-white">01 Februari 2023</p>
+                                    <p class="font-poppins text-sm my-1 font-medium dark:text-white">01 Februari 2023
+                                    </p>
                                     <h3>
                                         <a href=""
                                             class="inline-block text-lg font-semibold cursor-pointer text-black bg-gradient-to-r hover:from-indigo-500 hover:to-pink-500 hover:text-transparent hover:bg-clip-text dark:text-white">Apakah
@@ -386,7 +443,8 @@
                             </div>
                         </div>
                         <div class="w-full px-4">
-                            <div class="mb-10 overflow-hidden rounded-xl shadow-lg shadow-slate-300 dark:shadow-slate-500">
+                            <div
+                                class="mb-10 overflow-hidden rounded-xl shadow-lg shadow-slate-300 dark:shadow-slate-500">
                                 <div class="group">
                                     <img src="https://source.unsplash.com/360x200?code" alt="Mechanical Keyboard"
                                         class="w-full cursor-pointer transform transition duration-500 ease-in-out group-hover:scale-110" />
@@ -413,23 +471,27 @@
                     <h2
                         class="font-extrabold font-poppins text-5xl tracking-tight text-black mb-5 dark:text-white mt-2">
                         Hubungi Saya</h2>
-                    <p class="font-poppins mb-5 dark:text-white">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas iure
+                    <p class="font-poppins mb-5 dark:text-white">Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Quas iure
                         nulla suscipit maiores esse libero quis magni fugit? Dignissimos, maiores.</p>
                     <div class="whatsapp mb-2">
                         <h4 class="font-poppins font-medium text-sm dark:text-white">WhatsApp:</h4>
-                        <h3 class="font-inter text-2xl font-semibold mb-3 dark:text-white"><i class="fab fa-whatsapp"></i> +62
+                        <h3 class="font-inter text-2xl font-semibold mb-3 dark:text-white"><i
+                                class="fab fa-whatsapp"></i> +62
                             812 98897305</h3>
                         <hr class="border-t-2 border-t-purple-500 mr-6 rounded">
                     </div>
                     <div class="telegram mb-2">
                         <h4 class="font-poppins font-medium text-sm dark:text-white">Telegram:</h4>
-                        <h3 class="font-inter text-2xl font-semibold mb-3 dark:text-white"><i class="fab fa-telegram-plane"></i> +62
+                        <h3 class="font-inter text-2xl font-semibold mb-3 dark:text-white"><i
+                                class="fab fa-telegram-plane"></i> +62
                             812 98897305</h3>
                         <hr class="border-t-2 border-t-purple-500 mr-6 rounded">
                     </div>
                     <div class="email mb-2">
                         <h4 class="font-poppins font-medium text-sm dark:text-white">Email:</h4>
-                        <h3 class="font-inter text-2xl font-semibold mb-3 dark:text-white"><i class="far fa-envelope"></i>
+                        <h3 class="font-inter text-2xl font-semibold mb-3 dark:text-white"><i
+                                class="far fa-envelope"></i>
                             azfaalharits25@gmail.com</h3>
                         <hr class="border-t-2 border-t-purple-500 mr-6 rounded">
                     </div>
