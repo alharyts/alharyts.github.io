@@ -7,31 +7,6 @@
   font-family: "Inter", sans-serif;
 }
 
-.sunny {
-  @apply absolute inset-0 pointer-events-none;
-  background: linear-gradient(180deg, #fce043 0%, #fb7ba2 74%);
-  transition: all 0.3s ease;
-}
-
-section::before {
-  background: linear-gradient(to top, #1c0522, transparent)
-}
-
-.mountains_behind {
-  mix-blend-mode: difference;
-}
-
-.mountains_front {
-  mix-blend-mode: hard-light;
-  z-index: 10;
-}
-
-.elements {
-  animation-name: slideUpDown;
-  animation-duration: 7s;
-  animation-iteration-count: infinite;
-}
-
 @keyframes slideUpDown {
   0% {
     transform: translateY(0);
@@ -56,11 +31,71 @@ section::before {
   }
 }
 
-/* .stars{
-  background-image: url('../dist/img/stars.png');
-  animation: backgroundScroll 70s linear infinite;
-} */
+@keyframes typing {
+  from {
+    width: 0;
+  }
 
-.bg-night{
-  background: linear-gradient(#2b1055, #7597de);
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: cyan;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-13px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.floating-element-1 {
+  animation-name: float;
+  animation-duration: 6s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.floating-element-2 {
+  animation-name: float;
+  animation-duration: 6.7s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.floating-element-3 {
+  animation-name: float;
+  animation-duration: 7.7s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+#typed-text {
+  padding-right: 5px;
+  border-right: 2px solid #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 4s steps(30) infinite, blink-caret 1s step-end infinite;
+}
+
+.active{
+  @apply shadow-lg shadow-slate-500;
 }

@@ -24,83 +24,56 @@
 
 </head>
 
-<body class="overflow-x-hidden bg-night">
-    <header
-        class="w-full fixed z-[2000] transition-colors duration-500 bg-white dark:bg-slate-800 bg-opacity-60 dark:bg-opacity-60">
-        <nav class="font-inter font-medium text-sm">
+<body
+    class="bg-gradient-to-r from-emerald-400 via-cyan-500 to-indigo-500 dark:from-cyan-500 dark:via-indigo-500 dark:to-purple-600">
+    <header class="w-full fixed z-[2000] transition-colors">
+        <nav
+            class="font-inter font-medium text-sm bg-white dark:bg-slate-800 bg-opacity-60 dark:bg-opacity-60 shadow-md shadow-slate-200 dark:shadow-slate-800">
             <div class="py-3 px-4 flex justify-between items-center container mx-auto">
                 <div class="flex justify-start items-center">
                     <img src="./dist/img/favicon.png" alt="" srcset="" width="40" class="mr-2 rounded-full">
                     <span class="font-pacifico font-medium text-lg dark:text-white">Haritzzy Universe</span>
                 </div>
                 <div id="toggleTarget"
-                    class="bg-white py-6 px-8 absolute right-6 top-20 lg:bg-transparent lg:static lg:py-0 lg:px-0 hidden lg:block">
+                    class="bg-white dark:bg-slate-700 rounded-md lg:rounded-none py-4 px-5 absolute right-6 top-20 lg:dark:bg-transparent lg:static lg:py-0 lg:px-0 hidden lg:block w-1/2 lg:w-auto">
                     <a href="#"
-                        class="dark:text-white text-dark font-semibold ml-0 my-6 lg:my-0 lg:ml-8 hover:text-purple-500 dark:hover:text-cyan-400 block lg:inline">Home</a>
+                        class="dark:text-white text-dark font-semibold ml-0 my-6 lg:my-0 lg:ml-8 hover:text-emerald-500 dark:hover:text-purple-500 block lg:inline">Home</a>
                     <a href="#"
-                        class="dark:text-white text-dark font-semibold ml-0 my-6 lg:my-0 lg:ml-8 hover:text-purple-500 dark:hover:text-cyan-400 block lg:inline">About
+                        class="dark:text-white text-dark font-semibold ml-0 my-6 lg:my-0 lg:ml-8 hover:text-emerald-500 dark:hover:text-purple-500 block lg:inline">About
                         Me</a>
                     <a href="#"
-                        class="dark:text-white text-dark font-semibold ml-0 my-6 lg:my-0 lg:ml-8 hover:text-purple-500 dark:hover:text-cyan-400 block lg:inline">Experience</a>
+                        class="dark:text-white text-dark font-semibold ml-0 my-6 lg:my-0 lg:ml-8 hover:text-emerald-500 dark:hover:text-purple-500 block lg:inline">Experience</a>
                     <a href="#"
-                        class="dark:text-white text-dark font-semibold ml-0 my-6 lg:my-0 lg:ml-8 hover:text-purple-500 dark:hover:text-cyan-400 block lg:inline">Project</a>
+                        class="dark:text-white text-dark font-semibold ml-0 my-6 lg:my-0 lg:ml-8 hover:text-emerald-500 dark:hover:text-purple-500 block lg:inline">Project</a>
                     <a href="#"
-                        class="dark:text-white text-dark font-semibold ml-0 my-6 lg:my-0 lg:ml-8 hover:text-purple-500 dark:hover:text-cyan-400 block lg:inline">Blog</a>
+                        class="dark:text-white text-dark font-semibold ml-0 my-6 lg:my-0 lg:ml-8 hover:text-emerald-500 dark:hover:text-purple-500 block lg:inline">Blog</a>
                     <div class="flex lg:inline my-6 lg:my-0">
-                        <a href="#" class="text-white ml-5 cursor-pointer block lg:inline">
+                        <a href="#" class="text-white ml-0 lg:ml-5 cursor-pointer block lg:inline">
                             <button
-                                class="py-2 px-5 outline outline-1 outline-purple-500 bg-purple-500 rounded-lg hover:bg-purple-400 hover:outline-purple-400">Sign
+                                class="py-2 px-5 bg-gradient-to-r from-emerald-400 via-cyan-500 to-indigo-500  dark:from-cyan-500 dark:via-indigo-500 dark:to-purple-600 rounded-lg hover:shadow-lg dark:hover:shadow-slate-500 hover:shadow-slate-400">Sign
                                 In</button>
                         </a>
                     </div>
                 </div>
-                <button id="nav-toggle1" class="py-2 px-3 block lg:hidden" type="button"><i
-                        class="fas fa-bars text-xl"></i></button>
+                <button id="nav-toggle" class="py-2 px-3 block lg:hidden" type="button"><i
+                        class="fas fa-bars text-xl text-black dark:text-white"></i></button>
             </div>
         </nav>
     </header>
 
-    <section
-        class="select-none relative w-full h-[100vh] p-5 lg:p-[100px] hidden justify-center items-center overflow-hidden before:absolute before:bottom-0 before:w-full before:h-[100px] before:z-[1000] container mx-auto"
-        style="content: '';">
-        <img class="absolute top-0 left-0 w-full h-full object-cover pointer-events-none" src="dist/img/stars.png"
-            id="stars">
-        <div class="sun" id="sun"></div>
-        <img class="absolute top-0 left-0 w-full h-full object-cover mix-blend-screen" src="dist/img/moon.png"
-            id="moons">
-        <img class="absolute top-0 left-0 w-full h-full object-cover pointer-events-none"
-            src="dist/img/mountains_behind.png" id="mountains_behind">
-        <img class="absolute top-0 left-0 w-full h-full object-cover pointer-events-none z-10"
-            src="dist/img/mountains_front.png" id="mountains_front">
-        <figure id="myQuotes" class="max-w-screen-sm mt-3 lg:-mt-12 mx-auto dark:z-[9] z-[1001]">
-            <blockquote>
-                <p
-                    class="text-4xl md:text-5xl lg:text-6xl text-center font-extrabold font-poppins text-white -mt-0 lg:mt-0 leading-5 select-text elements uppercase">
-                    My Portfolio
-                </p>
-            </blockquote>
-            <div class="flex justify-center top-16 relative animate-bounce">
-                <a href="#hero-section">
-                    <div
-                        class="flex justify-center bg-white text-center h-8 w-8 items-center rounded-full text-yellow-500">
-                        <i class="fas fa-arrow-down"></i>
-                    </div>
-                </a>
-            </div>
-        </figure>
-    </section>
-
-    <section id="portfolio" class="dark:bg-dark container mx-auto stars afternoon">
-        <section class="bg-white dark:bg-gray-900 py-10 lg:py-2 pt-20 lg:pt-12">
-            <div class="flex flex-wrap-reverse py-10 text-black px-4">
+    <section id="portfolio" class="container mx-auto">
+        <section class="bg-white dark:bg-gray-900 py-10 lg:py-2 pt-20 lg:pt-12" id="home-section">
+            <div class="flex flex-wrap-reverse py-10 text-black px-2 lg:px-4">
                 <div class="w-full self-center lg:w-1/2">
                     <h1
                         class="max-w-3xl mb-4 text-center lg:text-start text-4xl font-extrabold leading-[3rem] lg:leading-none tracking-tight lg:text-6xl dark:text-white font-poppins">
-                        Hi There, I'm A<br> Backend Developer</h1>
+                        Hi There, I'm A<br> <span
+                            class="bg-gradient-to-r from-emerald-400 via-cyan-500 to-indigo-500 dark:from-cyan-500 dark:via-indigo-500 dark:to-purple-600 text-transparent bg-clip-text font-extrabold"
+                            id="typed-text"></span> Developer</h1>
                     <p
                         class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-lg dark:text-gray-400 font-inter text-center lg:text-start">
-                        Saya telah menyukai dunia pemrograman sejak awal dan telah memupuk semangat eksplorasi dalam
-                        berbagai teknologi.
+                        Saya sangat menyukai dunia pemrograman dan terus memupuk semangat eksplorasi dalam
+                        berbagai teknologi baru.
                     </p>
                     <div class="text-center lg:text-start">
                         <a href="">
@@ -116,42 +89,54 @@
                     </div>
                 </div>
                 <div class="w-full self-center lg:w-1/2">
-                    <img src="./dist/img/computer.png" alt="hero image" class="w-full">
+                    <img src="./dist/img/computer.png" alt="" class="w-full">
+                    <div class="hidden lg:block z-30 absolute">
+                        <img src="./dist/img/laravel.png" class="relative -top-[22rem] -right-[5rem] floating-element-1"
+                            alt="hero image" width="37">
+                        <img src="./dist/img/tailwindcss.png"
+                            class="relative -top-[28rem] -right-[25rem] floating-element-2" alt="hero image" width="53">
+                        <img src="./dist/img/bootstrap.png"
+                            class="relative -top-[12rem] -right-[10rem] floating-element-3" alt="hero image" width="60">
+                    </div>
                 </div>
+            </div>
         </section>
 
-        <section class="bg-slate-100 dark:bg-gray-800">
-            <div class="flex flex-wrap py-14 lg:py-5 text-white px-4">
-                <div class="w-full self-start lg:w-1/2">
-                    <img src="./dist/img/cv.png" alt="" srcset="">
+        <section class="bg-slate-100 dark:bg-gray-800" id="about-section">
+            <div class="flex flex-wrap py-14 lg:py-14 text-white px-4">
+                <div class="w-full self-center flex justify-center mb-10 lg:w-1/2">
+                    <img src="./dist/img/favicon.png" alt="" srcset="">
                 </div>
                 <div class="w-full self-center lg:w-1/2 text-justify">
-                    <p class="text-purple-500 font-semibold font-poppins text-center lg:text-start">About Me</p>
+                    <p
+                        class="text-emerald-500 dark:text-purple-500 font-semibold font-poppins text-center lg:text-start">
+                        Who Am I?</p>
                     <h2
                         class="font-extrabold font-poppins text-4xl text-center lg:text-start lg:text-5xl tracking-tight text-black mb-4 dark:text-white mt-2">
                         Tentang Saya</h2>
-                    <p class="font-poppins text-black lg:mb-8 dark:text-white mb-4">
+                    <p class="font-poppins text-black lg:mb-8 dark:text-white mb-4 text-sm lg:text-base">
                         Saya adalah seorang lulusan SMK jurusan Rekayasa Perangkat Lunak (RPL) yang memiliki
                         semangat besar dalam pengembangan web. Saya baru saja menyelesaikan pendidikan saya dan sangat
                         antusias untuk memulai karir sebagai seorang Web Developer.</p>
-                    <p class="font-poppins text-black lg:mb-8 dark:text-white">
+                    <p class="font-poppins text-black lg:mb-8 dark:text-white text-sm lg:text-base">
                         Selama masa studi saya, saya telah memperoleh pemahaman yang kuat tentang konsep dasar
                         pemrograman, pengembangan aplikasi, dan desain database. Saya juga telah mempelajari bahasa
                         pemrograman seperti HTML, CSS, JavaScript, dan PHP, serta kerangka kerja seperti Laravel.</p>
                 </div>
         </section>
 
-        <section class="bg-white dark:bg-gray-900">
+        <section class="bg-white dark:bg-gray-900" id="experience-section">
             <div class="flex flex-wrap py-20 px-4">
                 <div class="w-full self-start lg:w-1/2 mb-16 lg:mb-0">
-                    <p class="text-purple-500 font-semibold font-poppins">Experience</p>
+                    <p class="text-emerald-500 dark:text-purple-500 font-semibold font-poppins">What is your experience?
+                    </p>
                     <h2
                         class="font-extrabold font-poppins text-4xl lg:text-5xl tracking-tight text-black mb-4 lg:mb-8 dark:text-white mt-2">
                         Skills & <br class="block lg:hidden">Experience</h2>
-                    <p class="font-poppins mb-12 dark:text-white text-sm lg:text-base">Lorem ipsum dolor sit amet
-                        consectetur, adipisicing
-                        elit. Quas iure
-                        nulla suscipit maiores esse libero quis magni fugit? Dignissimos, maiores.</p>
+                    <p class="font-poppins mb-12 dark:text-white text-sm lg:text-base text-justify lg:text-start">Saya
+                        memiliki keahlian dalam
+                        pengembangan web full stack, yang mencakup pemrograman frontend dan backend. Saya juga mempunyai
+                        pengalaman kursus dan magang yang membantu meningkatkan pengalaman dibidang saya.</p>
                     <h2 class="font-pacifico text-2xl dark:text-white">My Skills</h2>
                     <hr class="mb-7 border-t-2 w-32 border-t-purple-500">
                     <div class="flex justify-center lg:flex-none lg:justify-normal">
@@ -184,53 +169,88 @@
                     </div>
                 </div>
                 <div class="w-full self-start lg:w-1/2">
-                    <div class="border-2 border-purple-600 rounded-lg p-0.5 mb-5">
+                    <div class="border-2 border-emerald-500 dark:border-indigo-500 rounded-lg p-0.5 mb-5">
                         <div class="flex text-center">
-                            <div
-                                class="py-2.5 px-3 bg-indigo-500 rounded-l-md text-2xl font-poppins font-bold text-white w-full dark:text-white">
+                            <div class="py-2.5 px-3 bg-emerald-600 dark:bg-indigo-500 border-2 border-emerald-600 dark:border-indigo-500 rounded-l-md text-2xl font-poppins font-bold text-white w-full dark:text-white cursor-pointer button-se"
+                                id="btn-experience">
                                 <i class="fas fa-tools"></i> Experience
                             </div>
-                            <div
-                                class="py-2.5 px-3 border-2 border-indigo-500 rounded-r-md text-2xl font-poppins font-bold text-black w-full dark:text-white">
+                            <div class="py-2.5 px-3 border-2 border-emerald-600 dark:border-indigo-500 rounded-r-md text-2xl font-poppins font-bold text-black w-full dark:text-white cursor-pointer button-se"
+                                id="btn-education">
                                 <i class="fas fa-graduation-cap"></i> Education
                             </div>
                         </div>
                     </div>
 
-                    <ol class="items-center sm:flex">
-                        <li class="relative mb-6 sm:mb-0">
-                            <div class="flex items-center">
-                                <div
-                                    class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
-                                    <i class="fas fa-tools text-xs text-blue-500"></i>
-                                </div>
-                            </div>
-                            <div class="mt-3 sm:pr-8">
-                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Flowbite Library v1.2.0
-                                </h3>
-                                <time
-                                    class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released
-                                    on December 23, 2021</time>
-                                <p class="text-base font-normal text-gray-500 dark:text-gray-400">Get started with
-                                    dozens of web components and interactive elements.</p>
-                            </div>
+                    <ol class="relative border-l border-gray-200 dark:border-gray-700" id="bar-experience">
+                        <li class="mb-10 ml-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                                <i class="fas fa-tools text-xs text-emerald-500 dark:text-purple-500"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">
+                                Kursus - LKP New Wacana</h3>
+                            <time
+                                class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">2019</time>
+                            <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">Selama kursus saya
+                                mempelajari Microsoft Office seperti: Ms Word, Ms Power Point, dan Ms Excel.</p>
                         </li>
-                        <li class="relative mb-6 sm:mb-0">
-                            <div class="flex items-center">
-                                <div
-                                    class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
-                                    <i class="fas fa-tools text-xs text-blue-500"></i>
-                                </div>
-                            </div>
-                            <div class="mt-3 sm:pr-8">
-                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Flowbite Library v1.3.0
-                                </h3>
-                                <time
-                                    class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released
-                                    on January 5, 2022</time>
-                                <p class="text-base font-normal text-gray-500 dark:text-gray-400">Get started with
-                                    dozens of web components and interactive elements.</p>
-                            </div>
+                        <li class="mb-10 ml-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                                <i class="fas fa-tools text-xs text-emerald-500 dark:text-purple-500"></i>
+                            </span>
+                            <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">Magang - Mutiara
+                                Digital Printing
+                            </h3>
+                            <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">7
+                                Februari - 30 April 2022</time>
+                            <p class="text-base font-normal text-gray-500 dark:text-gray-400">Selama magang mempelajari
+                                mesin printing dan dari hasil magang tersebut, meciptakan toko online berbasis web guna
+                                menerapkan ilmu yang dipelajari, dengan nilai akhir <b>87.0 - Baik</b>.</p>
+                        </li>
+                        <li class="ml-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                                <i class="fas fa-tools text-xs text-emerald-500 dark:text-purple-500"></i>
+                            </span>
+                            <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">UKK - SMK Negeri 3
+                                Banjar
+                            </h3>
+                            <time
+                                class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Maret
+                                2023</time>
+                            <p class="text-base font-normal text-gray-500 dark:text-gray-400">Melakukan Uji Kompetensi
+                                Keahlian internal oleh pihak sekolah dan eksternal oleh PT. Alvaro Satya Nusa, dengan
+                                hasil nilai kompetensi "<strong>Sangat Kompeten</strong>".</p>
+                        </li>
+                    </ol>
+
+                    <ol class="relative border-l border-gray-200 dark:border-gray-700 hidden" id="bar-education">
+                        <li class="mb-10 ml-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                                <i class="fas fa-graduation-cap text-xs text-emerald-500 dark:text-purple-500"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">
+                                SMK Negeri 3 Banjar</h3>
+                            <time
+                                class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">2020-2023</time>
+                            <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">Rekayasa Perangkat
+                                Lunak - RPL</p>
+                        </li>
+                        <li class="mb-10 ml-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                                <i class="fas fa-graduation-cap text-xs text-emerald-500 dark:text-purple-500"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">
+                                Universitas Almet Biru</h3>
+                            <time
+                                class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">2023
+                                - Sekarang</time>
+                            <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">S1 - Sistem Informasi
+                                -SI</p>
                         </li>
                     </ol>
 
@@ -238,54 +258,75 @@
             </div>
         </section>
 
-        <section class="bg-white dark:bg-gray-900">
-            <div class="flex flex-wrap-reverse lg:flex-wrap py-10 px-4">
-                <div class="w-full self-center lg:w-1/2">
-                    <img src="https://source.unsplash.com/360x200?code"
-                        class="w-full rounded-lg shadow-lg shadow-slate-500 mb-10" alt="" srcset="">
-                    <div class="border-2 border-white px-3 py-3 text-white text-sm rounded-lg bg-slate-800 shadow-md shadow-slate-600">
-                        <p class="font-semibold text-purple-500 font-poppins">Story:</p>
-                        <p class="font-poppins font-medium text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate dignissimos ratione, dolor voluptatem corrupti vel id soluta minus possimus ex quibusdam voluptate, corporis laudantium alias.</p>
-                    </div>
+        <section class="bg-slate-100 dark:bg-gray-800" id="gallery-section">
+            <div class="py-10 px-4">
+                <div class="mb-5 block lg:hidden text-center">
+                    <p class="text-emerald-500 dark:text-purple-500 font-semibold font-poppins">What is your memory?</p>
+                    <h2
+                        class="font-extrabold font-poppins text-4xl tracking-tight text-black mb-4 dark:text-white mt-2">
+                        Image Gallery</h2>
+                    <p class="text-black dark:text-white ml-0 lg:ml-10 text-sm lg:text-base">Kenangan yang tak
+                        terlupakan adalah
+                        kenangan saat menempuh pendidikan dan berproses apa yang kita impikan.</p>
                 </div>
-                <div class="w-full self-center lg:w-1/2">
-                    <div class="text-end mb-5">
-                        <span class="text-purple-500 font-semibold font-poppins">Gallery</span>
-                        <h2
-                            class="font-extrabold font-poppins text-5xl tracking-tight text-black mb-4 dark:text-white mt-2">
-                            Gallery Photo</h2>
-                        <p class="text-black dark:text-white ml-10">Lorem ipsum dolor, sit amet consectetur adipisicing
-                            elit.
-                            Ipsa minus
-                            temporibus voluptatum mollitia vitae alias.</p>
+
+                <div class="flex flex-wrap mt-8">
+                    <div class="w-full self-center lg:w-1/2">
+                        <img src="https://source.unsplash.com/360x200?code"
+                            class="w-full cursor-pointer rounded-lg shadow-lg shadow-slate-500 mb-10" id="display-pct"
+                            alt="" srcset="">
                     </div>
-                    <div class="flex justify-end ml-8">
-                        <div
-                            class="bg-slate-800 px-3 py-3 rounded-md border-2 border-purple-500 shadow-md shadow-slate-600">
-                            <div class="overflow-x-scroll pb-5">
-                                <div class="flex gap-3 mb-5">
-                                    <img src="https://source.unsplash.com/360x200?code" class="rounded" width="125"
-                                        alt="" srcset="">
-                                    <img src="https://source.unsplash.com/360x200?code" class="rounded" width="125"
-                                        alt="" srcset="">
-                                    <img src="https://source.unsplash.com/360x200?code" class="rounded" width="125"
-                                        alt="" srcset="">
-                                    <img src="https://source.unsplash.com/360x200?code" class="rounded" width="125"
-                                        alt="" srcset="">
-                                    <img src="https://source.unsplash.com/360x200?code" class="rounded" width="125"
-                                        alt="" srcset="">
-                                </div>
-                                <div class="flex gap-3">
-                                    <img src="https://source.unsplash.com/360x200?code" class="rounded" width="125"
-                                        alt="" srcset="">
-                                    <img src="https://source.unsplash.com/360x200?code" class="rounded" width="125"
-                                        alt="" srcset="">
-                                    <img src="https://source.unsplash.com/360x200?code" class="rounded" width="125"
-                                        alt="" srcset="">
-                                    <img src="https://source.unsplash.com/360x200?code" class="rounded" width="125"
-                                        alt="" srcset="">
-                                    <img src="https://source.unsplash.com/360x200?code" class="rounded" width="125"
-                                        alt="" srcset="">
+                    <div class="w-full self-center lg:w-1/2">
+                        <div class="text-end mb-5 hidden lg:block">
+                            <span class="text-emerald-500 dark:text-purple-500 font-semibold font-poppins">What is your
+                                memory?</span>
+                            <h2
+                                class="font-extrabold font-poppins text-4xl lg:text-5xl tracking-tight text-black mb-4 dark:text-white mt-2">
+                                Image Gallery</h2>
+                            <p class="text-black dark:text-white ml-10 text-sm lg:text-base">
+                                Kenangan yang tak
+                                terlupakan
+                                adalah kenangan saat menempuh pendidikan dan berproses apa yang kita impikan.
+                            </p>
+                        </div>
+                        <div class="flex justify-end ml-0 lg:ml-8">
+                            <div
+                                class="bg-slate-100 dark:bg-slate-800 px-3 py-3 rounded-md border-2 border-emerald-500 dark:border-purple-500 shadow-md shadow-slate-600">
+                                <div class="overflow-x-scroll pb-0 lg:pb-5">
+                                    <div class="flex gap-3 mb-5">
+                                        <img src="https://source.unsplash.com/360x200?mountain"
+                                            class="rounded cursor-pointer transform transition duration-500 ease-in-out hover:scale-105 picture"
+                                            width="125" alt="" srcset="">
+                                        <img src="https://source.unsplash.com/360x200?computer"
+                                            class="rounded cursor-pointer transform transition duration-500 ease-in-out hover:scale-105 picture"
+                                            width="125" alt="" srcset="">
+                                        <img src="https://source.unsplash.com/360x200?code"
+                                            class="rounded cursor-pointer transform transition duration-500 ease-in-out hover:scale-105 picture"
+                                            width="125" alt="" srcset="">
+                                        <img src="https://source.unsplash.com/360x200?code"
+                                            class="rounded cursor-pointer transform transition duration-500 ease-in-out hover:scale-105 picture"
+                                            width="125" alt="" srcset="">
+                                        <img src="https://source.unsplash.com/360x200?code"
+                                            class="rounded cursor-pointer transform transition duration-500 ease-in-out hover:scale-105 picture"
+                                            width="125" alt="" srcset="">
+                                    </div>
+                                    <div class="flex gap-3">
+                                        <img src="https://source.unsplash.com/360x200?code"
+                                            class="rounded cursor-pointer transform transition duration-500 ease-in-out hover:scale-105 picture"
+                                            width="125" alt="" srcset="">
+                                        <img src="https://source.unsplash.com/360x200?code"
+                                            class="rounded cursor-pointer transform transition duration-500 ease-in-out hover:scale-105 picture"
+                                            width="125" alt="" srcset="">
+                                        <img src="https://source.unsplash.com/360x200?code"
+                                            class="rounded cursor-pointer transform transition duration-500 ease-in-out hover:scale-105 picture"
+                                            width="125" alt="" srcset="">
+                                        <img src="https://source.unsplash.com/360x200?code"
+                                            class="rounded cursor-pointer transform transition duration-500 ease-in-out hover:scale-105 picture"
+                                            width="125" alt="" srcset="">
+                                        <img src="https://source.unsplash.com/360x200?code"
+                                            class="rounded cursor-pointer transform transition duration-500 ease-in-out hover:scale-105 picture"
+                                            width="125" alt="" srcset="">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -294,66 +335,87 @@
             </div>
         </section>
 
-        <section class="bg-white dark:bg-gray-900">
+        <section class="bg-white dark:bg-gray-900" id="service-section">
             <div class="py-10 px-4">
                 <div class="text-center">
-                    <p class="text-purple-500 font-semibold font-poppins">Service</p>
+                    <p class="text-emerald-500 dark:text-purple-500 font-semibold font-poppins">What can you do?</p>
                     <h2
                         class="font-extrabold font-poppins text-4xl lg:text-5xl tracking-tight text-black mb-4 dark:text-white mt-2">
-                        My <br class="block lg:hidden">Services</h2>
-                    <p class="px-0 lg:px-64 text-sm lg:text-base dark:text-white">Lorem ipsum dolor, sit amet
-                        consectetur adipisicing elit.
-                        Ipsa minus
-                        temporibus voluptatum mollitia vitae alias quisquam adipisci.</p>
+                        My Service</h2>
+                    <p class="px-0 lg:px-64 text-sm lg:text-base dark:text-white">Saya dapat merancang dan membangun
+                        situs web dengan tampilan dan fungsionalitas yang sesuai dengan kebutuhan klien.</p>
                 </div>
 
-                <div class="flex justify-center mt-8 px-40">
-                    <div class="grid grid-cols-2 gap-7">
-                        <div class="border-2 border-purple-500 py-3 px-3 bg-slate-700 rounded-lg">
+                <div class="flex justify-center mt-8 px-0 lg:px-40">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-7">
+                        <div
+                            class="border-2 border-emerald-500 dark:border-purple-500 py-3 px-3 bg-transparent dark:bg-slate-700 rounded-lg">
                             <div class="flex items-center gap-x-5">
-                                <div class="py-2 px-2 bg-emerald-500 rounded-full">
-                                    <img src="https://cdn-icons-png.flaticon.com/128/7889/7889802.png" width="100" alt=""
-                                        srcset="">
+                                <div class="py-2 px-2 bg-emerald-500 dark:bg-purple-500 rounded-full">
+                                    <img src="https://cdn-icons-png.flaticon.com/128/7889/7889802.png" width="100"
+                                        alt="" srcset="">
                                 </div>
                                 <div>
-                                    <h3 class="text-xl font-poppins font-semibold text-slate-300 mb-3">UI/UX Design</h3>
-                                    <p class="text-slate-400 font-poppins font-semibold text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat expedita, voluptatibus tenetur animi repellat magni.</p>
+                                    <h3 class="text-xl font-poppins font-semibold text-black dark:text-slate-300 mb-3">
+                                        UI/UX Design</h3>
+                                    <p
+                                        class="text-black dark:text-slate-400 font-poppins font-semibold text-sm text-justify">
+                                        Layanan ini mencakup pembuatan dan desain situs web yang sesuai dengan kebutuhan
+                                        dan tujuan Anda.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="border-2 border-purple-500 py-3 px-3 bg-slate-700 rounded-lg">
+                        <div
+                            class="border-2 border-emerald-500 dark:border-purple-500 py-3 px-3 bg-transparent dark:bg-slate-700 rounded-lg">
                             <div class="flex items-center gap-x-5">
-                                <div class="py-2 px-2 bg-emerald-500 rounded-full">
-                                    <img src="https://cdn-icons-png.flaticon.com/128/3573/3573187.png" width="100" alt=""
-                                        srcset="">
+                                <div class="py-2 px-2 bg-emerald-500 dark:bg-purple-500 rounded-full">
+                                    <img src="https://cdn-icons-png.flaticon.com/128/3573/3573187.png" width="100"
+                                        alt="" srcset="">
                                 </div>
                                 <div>
-                                    <h3 class="text-xl font-poppins font-semibold text-slate-300 mb-3">Web Development</h3>
-                                    <p class="text-slate-400 font-poppins font-semibold text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat expedita, voluptatibus tenetur animi repellat magni.</p>
+                                    <h3 class="text-xl font-poppins font-semibold text-black dark:text-slate-300 mb-3">
+                                        Web Development
+                                    </h3>
+                                    <p
+                                        class="text-black dark:text-slate-400 font-poppins font-semibold text-sm text-justify">
+                                        Layanan ini mencakup pembuatan website toko online, portfolio website, dll.
+                                        Sesuai kebutuhan dan tujuan Anda.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="border-2 border-purple-500 py-3 px-3 bg-slate-700 rounded-lg">
+                        <div
+                            class="border-2 border-emerald-500 dark:border-purple-500 py-3 px-3 bg-transparent dark:bg-slate-700 rounded-lg">
                             <div class="flex items-center gap-x-5">
-                                <div class="py-2 px-2 bg-emerald-500 rounded-full">
-                                    <img src="https://cdn-icons-png.flaticon.com/128/3493/3493819.png" width="100" alt=""
-                                        srcset="">
+                                <div class="py-2 px-2 bg-emerald-500 dark:bg-purple-500 rounded-full">
+                                    <img src="https://cdn-icons-png.flaticon.com/128/3493/3493819.png" width="100"
+                                        alt="" srcset="">
                                 </div>
                                 <div>
-                                    <h3 class="text-xl font-poppins font-semibold text-slate-300 mb-3">Database Design</h3>
-                                    <p class="text-slate-400 font-poppins font-semibold text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat expedita, voluptatibus tenetur animi repellat magni.</p>
+                                    <h3 class="text-xl font-poppins font-semibold text-black dark:text-slate-300 mb-3">
+                                        Database Design
+                                    </h3>
+                                    <p
+                                        class="text-black dark:text-slate-400 font-poppins font-semibold text-sm text-justify">
+                                        Layanan ini mencakup pembuatan dan desain database yang sesuai dengan kebutuhan
+                                        dan tujuan Anda.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="border-2 border-purple-500 py-3 px-3 bg-slate-700 rounded-lg">
+                        <div
+                            class="border-2 border-emerald-500 dark:border-purple-500 py-3 px-3 bg-transparent dark:bg-slate-700 rounded-lg">
                             <div class="flex items-center gap-x-5">
-                                <div class="py-2 px-2 bg-emerald-500 rounded-full">
-                                    <img src="https://cdn-icons-png.flaticon.com/128/3234/3234053.png" width="100" alt=""
-                                        srcset="">
+                                <div class="py-2 px-2 bg-emerald-500 dark:bg-purple-500 rounded-full">
+                                    <img src="https://cdn-icons-png.flaticon.com/128/3234/3234053.png" width="100"
+                                        alt="" srcset="">
                                 </div>
                                 <div>
-                                    <h3 class="text-xl font-poppins font-semibold text-slate-300 mb-3">Integration API</h3>
-                                    <p class="text-slate-400 font-poppins font-semibold text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat expedita, voluptatibus tenetur animi repellat magni.</p>
+                                    <h3 class="text-xl font-poppins font-semibold text-black dark:text-slate-300 mb-3">
+                                        Integration API
+                                    </h3>
+                                    <p
+                                        class="text-black dark:text-slate-400 font-poppins font-semibold text-sm text-justify">
+                                        Layanan ini menyediakan jasa integrasi API seperti: RajaOngkir, ApiGames,
+                                        payment gateway Midtrans, dan login OAuth.</p>
                                 </div>
                             </div>
                         </div>
@@ -362,17 +424,16 @@
             </div>
         </section>
 
-        <section class="bg-slate-200 dark:bg-gray-800">
+        <section class="bg-slate-200 dark:bg-gray-800" id="social-section">
             <div class="py-10 px-4">
                 <div class="text-center">
-                    <p class="text-purple-500 font-semibold font-poppins">Social Media</p>
+                    <p class="text-emerald-500 dark:text-purple-500 font-semibold font-poppins">How can I collaborate
+                        with you?</p>
                     <h2
                         class="font-extrabold font-poppins text-4xl lg:text-5xl tracking-tight text-black mb-4 dark:text-white mt-2">
                         Mari <br class="block lg:hidden">Berkolaborasi</h2>
-                    <p class="px-0 lg:px-64 text-sm lg:text-base dark:text-white">Lorem ipsum dolor, sit amet
-                        consectetur adipisicing elit.
-                        Ipsa minus
-                        temporibus voluptatum mollitia vitae alias quisquam adipisci.</p>
+                    <p class="px-0 lg:px-64 text-sm lg:text-base dark:text-white">Jika Anda tertarik dan ingin
+                        berkolaborasi terkait pengembangan web, Anda bisa mengunjungi media sosial berikut.</p>
                 </div>
                 <div class="flex justify-center mt-8 gap-7">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1024px-Instagram_logo_2022.svg.png"
@@ -389,17 +450,15 @@
             </div>
         </section>
 
-        <section class="bg-white dark:bg-gray-900">
+        <section class="bg-white dark:bg-gray-900" id="project-section">
             <div class="py-10 px-4">
                 <div class="text-center">
-                    <p class="text-purple-500 font-semibold font-poppins">Project</p>
+                    <p class="text-emerald-500 dark:text-purple-500 font-semibold font-poppins">Preferred projects?</p>
                     <h2
                         class="font-extrabold font-poppins text-4xl lg:text-5xl tracking-tight text-black mb-4 dark:text-white mt-2">
                         Project Unggulan</h2>
-                    <p class="px-0 lg:px-64 dark:text-white text-sm lg:text-base">Lorem ipsum dolor, sit amet
-                        consectetur adipisicing elit.
-                        Ipsa minus
-                        temporibus voluptatum mollitia vitae alias quisquam adipisci.</p>
+                    <p class="px-0 lg:px-64 dark:text-white text-sm lg:text-base">Dengan kemampuan yang saya miliki saya
+                        dapat membangun website yang responsive dan fungsionalitas sesuai dengan keinginan klien.</p>
                 </div>
                 <div class="flex justify-center mt-10">
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
@@ -410,10 +469,10 @@
                                     <img src="./dist/img/apm.png" alt="Mechanical Keyboard"
                                         class="w-full cursor-pointer transform transition duration-500 ease-in-out group-hover:scale-110" />
                                 </div>
-                                <div class="py-9 px-4">
+                                <div class="py-8 px-4">
                                     <h3>
                                         <a href="https://github.com/alharyts/web-pengaduan-masyarakat"
-                                            class="inline-block text-xl font-semibold cursor-pointer text-black bg-gradient-to-r hover:from-indigo-500 hover:to-pink-500 hover:text-transparent hover:bg-clip-text dark:text-white">Aplikasi
+                                            class="inline-block text-xl font-semibold cursor-pointer text-black dark:text-white">Aplikasi
                                             Pengaduan Masyarakat</a>
                                     </h3>
                                     <span
@@ -424,7 +483,7 @@
                                         Layanan Pengaduan
                                         Masyarakat SMK Negeri 3 Banjar 2023.</p>
                                     <a href="https://github.com/alharyts/web-pengaduan-masyarakat"
-                                        class="rounded-lg py-2.5 px-4 bg-indigo-500 text-white font-medium bg-gradient-to-r from-indigo-500 to-pink-500 hover:from-pink-500 hover:to-indigo-500">Source
+                                        class="rounded-lg py-2.5 px-4 text-white font-medium bg-gradient-to-r from-emerald-400 via-cyan-500 to-indigo-500 dark:from-cyan-500 dark:via-indigo-500 dark:to-purple-600">Source
                                         Code</a>
                                 </div>
                             </div>
@@ -436,10 +495,10 @@
                                     <img src="./dist/img/tokoonlinerpl.png" alt="Mechanical Keyboard"
                                         class="w-full cursor-pointer transform transition duration-500 ease-in-out group-hover:scale-110" />
                                 </div>
-                                <div class="py-9 px-4">
+                                <div class="py-8 px-4">
                                     <h3>
                                         <a href="https://github.com/alharyts/toko-online-rpl1"
-                                            class="inline-block text-xl font-semibold cursor-pointer text-black bg-gradient-to-r hover:from-indigo-500 hover:to-pink-500 hover:text-transparent hover:bg-clip-text dark:text-white">Toko
+                                            class="inline-block text-xl font-semibold cursor-pointer text-black dark:text-white">Toko
                                             Online Project Jurusan</a>
                                     </h3>
                                     <span
@@ -451,7 +510,7 @@
                                         XII
                                         RPL 1 SMK Negeri 3 Banjar</p>
                                     <a href="https://github.com/alharyts/toko-online-rpl1"
-                                        class="rounded-lg py-2.5 px-4 bg-indigo-500 text-white font-medium bg-gradient-to-r from-indigo-500 to-pink-500 hover:from-pink-500 hover:to-indigo-500">Source
+                                        class="rounded-lg py-2.5 px-4 text-white font-medium bg-gradient-to-r from-emerald-400 via-cyan-500 to-indigo-500 dark:from-cyan-500 dark:via-indigo-500 dark:to-purple-600">Source
                                         Code</a>
                                 </div>
                             </div>
@@ -463,10 +522,10 @@
                                     <img src="https://source.unsplash.com/360x200?coding" alt="Mechanical Keyboard"
                                         class="w-full cursor-pointer transform transition duration-500 ease-in-out group-hover:scale-110" />
                                 </div>
-                                <div class="py-9 px-4">
+                                <div class="py-8 px-4">
                                     <h3>
                                         <a href="https://github.com/alharyts/toko-online-pkl"
-                                            class="inline-block text-xl font-semibold cursor-pointer text-black bg-gradient-to-r hover:from-indigo-500 hover:to-pink-500 hover:text-transparent hover:bg-clip-text dark:text-white">Toko
+                                            class="inline-block text-xl font-semibold cursor-pointer text-black dark:text-white">Toko
                                             Online Hasil PKL</a>
                                     </h3>
                                     <span
@@ -477,7 +536,7 @@
                                         PKL di Mutiara
                                         Digital Printing - XI RPL 1 -SMK Negeri 3 Banjar</p>
                                     <a href="https://github.com/alharyts/toko-online-pkl"
-                                        class="rounded-lg py-2.5 px-4 bg-indigo-500 text-white font-medium bg-gradient-to-r from-indigo-500 to-pink-500 hover:from-pink-500 hover:to-indigo-500">Source
+                                        class="rounded-lg py-2.5 px-4 text-white font-medium bg-gradient-to-r from-emerald-400 via-cyan-500 to-indigo-500 dark:from-cyan-500 dark:via-indigo-500 dark:to-purple-600">Source
                                         Code</a>
                                 </div>
                             </div>
@@ -487,17 +546,16 @@
             </div>
         </section>
 
-        <section class="bg-slate-100 dark:bg-gray-800">
+        <section class="bg-slate-100 dark:bg-gray-800" id="article-section">
             <div class="py-10 px-4">
                 <div class="text-center">
-                    <span class="text-purple-500 font-semibold font-poppins">Blog</span>
+                    <span class="text-emerald-500 dark:text-purple-500 font-semibold font-poppins">Recent posts?</span>
                     <h2
                         class="font-extrabold font-poppins text-4xl lg:text-5xl tracking-tight text-black mb-4 dark:text-white mt-2">
                         Artikel Terbaru</h2>
-                    <p class="px-0 lg:px-64 dark:text-white text-sm lg:text-base">Lorem ipsum dolor, sit amet
-                        consectetur adipisicing elit.
-                        Ipsa minus
-                        temporibus voluptatum mollitia vitae alias quisquam adipisci.</p>
+                    <p class="px-0 lg:px-64 dark:text-white text-sm lg:text-base">Disela-sela kesibukan, saya terkadang
+                        menyempatkan diri menulis sebuah artikel seperti teknologi, tutorial, kesehatan, dan
+                        programming.</p>
                 </div>
                 <div class="flex justify-center mt-10">
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
@@ -508,11 +566,11 @@
                                     <img src="https://source.unsplash.com/360x200?coding" alt="Mechanical Keyboard"
                                         class="w-full cursor-pointer transform transition duration-500 ease-in-out group-hover:scale-110" />
                                 </div>
-                                <div class="py-4 px-2">
+                                <div class="py-4 px-3">
                                     <p class="font-poppins text-sm my-1 font-medium dark:text-white">01 Januari 2023</p>
                                     <h3>
                                         <a href=""
-                                            class="inline-block text-lg font-semibold cursor-pointer text-black bg-gradient-to-r hover:from-indigo-500 hover:to-pink-500 hover:text-transparent hover:bg-clip-text dark:text-white">Bagaimana
+                                            class="inline-block text-base font-semibold cursor-pointer text-black dark:text-white">Bagaimana
                                             Cara Membuat Koneksi ke Database MySQL Pada PHP</a>
                                     </h3>
                                 </div>
@@ -525,12 +583,12 @@
                                     <img src="https://source.unsplash.com/360x200?coffee" alt="Mechanical Keyboard"
                                         class="w-full cursor-pointer transform transition duration-500 ease-in-out group-hover:scale-110" />
                                 </div>
-                                <div class="py-4 px-2">
+                                <div class="py-4 px-3">
                                     <p class="font-poppins text-sm my-1 font-medium dark:text-white">01 Februari 2023
                                     </p>
                                     <h3>
                                         <a href=""
-                                            class="inline-block text-lg font-semibold cursor-pointer text-black bg-gradient-to-r hover:from-indigo-500 hover:to-pink-500 hover:text-transparent hover:bg-clip-text dark:text-white">Apakah
+                                            class="inline-block text-base font-semibold cursor-pointer text-black dark:text-white">Benarkah
                                             Minum Kopi Dapat Meningkatkan Skill Coding? Begini Penjelasannya</a>
                                     </h3>
                                 </div>
@@ -543,11 +601,11 @@
                                     <img src="https://source.unsplash.com/360x200?code" alt="Mechanical Keyboard"
                                         class="w-full cursor-pointer transform transition duration-500 ease-in-out group-hover:scale-110" />
                                 </div>
-                                <div class="py-4 px-2">
+                                <div class="py-4 px-3">
                                     <p class="font-poppins text-sm my-1 font-medium dark:text-white">01 Maret 2023</p>
                                     <h3>
                                         <a href=""
-                                            class="inline-block text-lg font-semibold cursor-pointer text-black bg-gradient-to-r hover:from-indigo-500 hover:to-pink-500 hover:text-transparent hover:bg-clip-text dark:text-white">Laravel
+                                            class="inline-block text-base font-semibold cursor-pointer text-black dark:text-white">Laravel
                                             atau Symfony Manakah Framework yang Worth It Digunakan...</a>
                                     </h3>
                                 </div>
@@ -558,62 +616,68 @@
             </div>
         </section>
 
-        <section class="bg-white dark:bg-slate-900">
+        <section class="bg-white dark:bg-slate-900" id="contact-section">
             <div class="flex flex-wrap py-20 px-4">
                 <div class="w-full self-start lg:w-1/2 mb-10 lg:mb-0">
-                    <p class="text-purple-500 font-semibold font-poppins text-center lg:text-start">Contact</p>
+                    <p
+                        class="text-emerald-500 dark:text-purple-500 font-semibold font-poppins text-center lg:text-start">
+                        How can I contact
+                        you?</p>
                     <h2
                         class="font-extrabold font-poppins text-4xl lg:text-5xl tracking-tight text-black mb-5 dark:text-white mt-2 text-center lg:text-start">
                         Hubungi Saya</h2>
-                    <p class="font-poppins mb-5 dark:text-white text-sm lg:text-base text-center lg:text-start">Lorem
-                        ipsum dolor sit amet
-                        consectetur, adipisicing
-                        elit. Quas iure
-                        nulla suscipit maiores esse libero quis magni fugit? Dignissimos, maiores.</p>
+                    <p
+                        class="font-poppins mb-5 dark:text-white text-sm lg:text-base text-center lg:text-start mr-0 lg:mr-5">
+                        Anda bisa menghubungi saya melalui WhatsApp, Telegram, dan Email. Atau Anda bisa juga mengisi
+                        contact form yang tertera.</p>
                     <div class="whatsapp mb-2">
                         <h4 class="font-poppins font-medium text-sm dark:text-white">WhatsApp:</h4>
                         <h3 class="font-inter text-2xl font-semibold mb-3 dark:text-white"><i
                                 class="fab fa-whatsapp"></i> +62
-                            812 98897305</h3>
-                        <hr class="border-t-2 border-t-purple-500 mr-0 lg:mr-6 rounded">
+                            <i>data not found</i>
+                        </h3>
+                        <hr class="border-t-2 border-t-emerald-500 dark:border-t-purple-500 mr-0 lg:mr-6 rounded">
                     </div>
                     <div class="telegram mb-2">
                         <h4 class="font-poppins font-medium text-sm dark:text-white">Telegram:</h4>
                         <h3 class="font-inter text-2xl font-semibold mb-3 dark:text-white"><i
                                 class="fab fa-telegram-plane"></i> +62
-                            812 98897305</h3>
-                        <hr class="border-t-2 border-t-purple-500 mr-0 lg:mr-6 rounded">
+                            <i>data not found</i>
+                        </h3>
+                        <hr class="border-t-2 border-t-emerald-500 dark:border-t-purple-500 mr-0 lg:mr-6 rounded">
                     </div>
                     <div class="email mb-2">
                         <h4 class="font-poppins font-medium text-sm dark:text-white">Email:</h4>
                         <h3 class="font-inter text-2xl font-semibold mb-3 dark:text-white"><i
                                 class="far fa-envelope"></i>
                             azfaalharits25@gmail.com</h3>
-                        <hr class="border-t-2 border-t-purple-500 mr-0 lg:mr-6 rounded">
+                        <hr class="border-t-2 border-t-emerald-500 dark:border-t-purple-500 mr-0 lg:mr-6 rounded">
                     </div>
                 </div>
                 <div class="w-full self-start lg:w-1/2">
                     <form action="" method="post" class="text-end lg:text-start">
-                        <h5 class="text-center text-2xl font-bold font-poppins text-purple-500 mb-7">Contact Form</h5>
+                        <h5
+                            class="text-center text-2xl font-bold font-poppins text-emerald-500 dark:text-purple-500 mb-7">
+                            Contact Form</h5>
                         <div class="flex mb-4">
                             <input type="text"
-                                class="w-full border outline-none border-slate-400 py-3.5 px-3 rounded-lg mr-2 font-poppins font-medium focus:ring focus:ring-purple-500 dark:bg-slate-800 dark:text-white placeholder:text-gray-700"
+                                class="w-full border outline-none border-slate-400 py-3.5 px-3 rounded-lg mr-2 font-poppins font-medium focus:ring focus:ring-emerald-500 dark:focus:ring-purple-500 dark:bg-slate-800 dark:text-white placeholder:text-gray-400"
                                 placeholder="Your Name">
                             <input type="email"
-                                class="w-full border outline-none border-slate-400 py-3.5 px-3 rounded-lg font-poppins font-medium focus:ring focus:ring-purple-500 dark:bg-slate-800 dark:text-white  placeholder:text-gray-700"
+                                class="w-full border outline-none border-slate-400 py-3.5 px-3 rounded-lg font-poppins font-medium focus:ring focus:ring-emerald-500 dark:focus:ring-purple-500 dark:bg-slate-800 dark:text-white  placeholder:text-gray-400"
                                 placeholder="Your Email">
                         </div>
                         <input type="text"
-                            class="w-full border outline-none border-slate-400 py-3.5 px-3 rounded-lg font-poppins font-medium mb-4 focus:ring focus:ring-purple-500 dark:bg-slate-800 dark:text-white  placeholder:text-gray-700"
+                            class="w-full border outline-none border-slate-400 py-3.5 px-3 rounded-lg font-poppins font-medium mb-4 focus:ring focus:ring-emerald-500 dark:focus:ring-purple-500 dark:bg-slate-800 dark:text-white  placeholder:text-gray-400"
                             placeholder="Your Phone">
                         <input type="text"
-                            class="w-full border outline-none border-slate-400 py-3.5 px-3 rounded-lg font-poppins font-medium mb-4 focus:ring focus:ring-purple-500 dark:bg-slate-800 dark:text-white  placeholder:text-gray-700"
+                            class="w-full border outline-none border-slate-400 py-3.5 px-3 rounded-lg font-poppins font-medium mb-4 focus:ring focus:ring-emerald-500 dark:focus:ring-purple-500 dark:bg-slate-800 dark:text-white  placeholder:text-gray-400"
                             placeholder="Subject">
                         <textarea type="text"
-                            class="w-full border outline-none border-slate-400 py-3.5 px-3 rounded-lg font-poppins font-medium mb-4 min-h-[10rem] focus:ring focus:ring-purple-500 dark:bg-slate-800 dark:text-white  placeholder:text-gray-700"
+                            class="w-full border outline-none border-slate-400 py-3.5 px-3 rounded-lg font-poppins font-medium mb-4 min-h-[10rem] focus:ring focus:ring-emerald-500 dark:focus:ring-purple-500 dark:bg-slate-800 dark:text-white  placeholder:text-gray-400"
                             placeholder="Message"></textarea>
                         <button type="submit"
-                            class="px-10 py-3.5 bg-purple-500 rounded-lg text-white font-poppins font-semibold"><i
+                            class="px-10 py-3.5 bg-emerald-500 dark:bg-purple-500 rounded-lg text-white font-poppins font-semibold"><i
                                 class="fas fa-paper-plane"></i> Submit</button>
                     </form>
                 </div>
@@ -622,58 +686,58 @@
     </section>
 
     <footer id="footer" class="container mx-auto">
-        <div class="px-4 bg-slate-700 dark:bg-slate-900">
-            <hr class="border-t-2 border-t-purple-500 rounded">
+        <div class="px-4 bg-white dark:bg-slate-900">
+            <hr class="border-t-2 border-t-emerald-500 dark:border-t-purple-500 rounded">
             <div class="py-14">
                 <div class="flex">
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-x-0 gap-y-7 lg:gap-x-16 lg:gap-y-0">
                         <div class="">
                             <div class="flex justify-start items-center mb-5">
-                                <img class="rounded-full w-[100px] h-[100px] lg:w-[120px] lg:h-[120px] outline outline-2 outline-white mr-3 lg:mr-6"
+                                <img class="rounded-full w-[100px] h-[100px] lg:w-[120px] lg:h-[120px] outline outline-2 outline-black dark:outline-white mr-3 lg:mr-6"
                                     src="./dist/img/haritzzy.jpg" alt="" srcset="">
                                 <div class="flex flex-col">
                                     <div class="relative top-0">
-                                        <h3 class="text-white text-xl font-semibold font-poppins">Atyla Azfa Al Harits
+                                        <h3 class="text-black dark:text-white text-xl font-semibold font-poppins">Atyla
+                                            Azfa Al Harits
                                         </h3>
-                                        <p class="text-white text-sm">Jl. Raya Banjar - Sidaharja</p>
-                                        <p class="text-white text-sm">Ciamis, Indonesia (46385)</p>
+                                        <p class="text-black dark:text-white text-sm">Jl. Raya Banjar - Sidaharja</p>
+                                        <p class="text-black dark:text-white text-sm">Ciamis, Indonesia (46385)</p>
                                     </div>
                                 </div>
                             </div>
-                            <span class="text-white font-poppins font-medium">"My life is just bugs and fixes"</span>
+                            <span class="text-black dark:text-white font-poppins font-medium">"My life is just bugs and
+                                fixes"</span>
                         </div>
                         <div class="">
                             <div class="flex justify-start">
                                 <div class="mb-5">
-                                    <h1 class="text-3xl font-extrabold font-poppins text-white"><span
-                                            class="font-extrabold font-poppins text-white">Social Media</span></h1>
+                                    <h1 class="text-3xl font-extrabold font-poppins text-black dark:text-white"><span
+                                            class="font-extrabold font-poppins text-black dark:text-white">Social
+                                            Media</span></h1>
                                 </div>
                             </div>
-                            <div class="text-white inline-block">
-                                <a href="https://instagram.com/alharits25?igshid=MzNlNGNkZWQ4Mg=="
-                                    class="block pb-1.5 hover:text-blue-700">Instagram</a>
-                                <a href="https://twitter.com/AtylaHarits"
-                                    class="block pb-1.5 hover:text-blue-700">Twitter</a>
-                                <a href="https://www.linkedin.com/in/atyla-azfa-al-harits-44a2b2237"
-                                    class="block pb-1.5 hover:text-blue-700">Linkedin</a>
+                            <div class="text-black dark:text-white inline-block">
+                                <a href="" class="block pb-1.5 hover:text-blue-700">Instagram</a>
+                                <a href="" class="block pb-1.5 hover:text-blue-700">Twitter</a>
+                                <a href="" class="block pb-1.5 hover:text-blue-700">Linkedin</a>
+                                <a href="" class="block pb-1.5 hover:text-blue-700">Github</a>
+                                <a href="" class="block pb-1.5 hover:text-blue-700">Facebook</a>
                             </div>
                         </div>
                         <div class="">
                             <div class="flex justify-start">
                                 <div class="mb-5">
-                                    <h1 class="text-3xl font-extrabold font-poppins text-white"><span
-                                            class="font-extrabold font-poppins text-white">Tautan Menu</span></h1>
+                                    <h1 class="text-3xl font-extrabold font-poppins text-black dark:text-white"><span
+                                            class="font-extrabold font-poppins text-black dark:text-white">Tautan
+                                            Menu</span></h1>
                                 </div>
                             </div>
-                            <div class="text-white inline-block">
-                                <a href="#hero-section" class="block pb-1.5 hover:text-blue-700">Home</a>
-                                <a href="#about-section" class="block pb-1.5 hover:text-blue-700">About Me</a>
-                                <a href="#technicalSkill-section" class="block pb-1.5 hover:text-blue-700">Technical
-                                    Skills</a>
-                                <a href="#internshipExperience-section"
-                                    class="block pb-1.5 hover:text-blue-700">Internship
-                                    Experience</a>
-                                <a href="#project-section" class="block pb-1.5 hover:text-blue-700">Latest Project</a>
+                            <div class="text-black dark:text-white inline-block">
+                                <a href="#home-section" class="block pb-1.5 hover:text-blue-700">Home</a>
+                                <a href="#about-section" class="block pb-1.5 hover:text-blue-700">About</a>
+                                <a href="#experience-section" class="block pb-1.5 hover:text-blue-700">Experience</a>
+                                <a href="#gallery-section" class="block pb-1.5 hover:text-blue-700">Gallery</a>
+                                <a href="#service-section" class="block pb-1.5 hover:text-blue-700">Service</a>
                             </div>
                         </div>
                     </div>
@@ -681,13 +745,13 @@
             </div>
         </div>
 
-        <div class="max-w-screen-xl p-4 mx-auto lg:p-5 bg-slate-800 dark:bg-slate-950">
+        <div class="py-4 mx-auto lg:py-5 bg-slate-800 dark:bg-slate-950">
             <div class="flex justify-center items-center mb-3">
                 <img src="./dist/img/tailwindcss.png" class="mr-2" width="50" alt="" srcset="">
                 <span class="text-white font-semibold text-lg">Tailwind CSS</span>
             </div>
             <div class="text-center">
-                <span class="block text-sm text-center text-gray-500 dark:text-gray-400">© 2023 All
+                <span class="block text-sm text-center text-gray-300 dark:text-gray-400">© 2023 All
                     Rights Reserved. Built with <a href="https://tailwindcss.com"
                         class="text-cyan-500 font-semibold hover:underline">Tailwind CSS</a>.
                 </span>
@@ -696,9 +760,9 @@
         </div>
     </footer>
 
-    <div class="fixed right-6 bottom-6 group z-[999999] ">
+    <div class="fixed right-6 bottom-6 group z-[999999]" id="mode-button">
         <button type="button" id="rightBtn"
-            class="flex items-center justify-center text-white bg-gradient-to-r from-indigo-500 to-pink-500 rounded-full w-14 h-14 hover:bg-blue-800 outline outline-2 dark:outline-white outline-black">
+            class="flex items-center justify-center text-white bg-gradient-to-r from-emerald-400 via-cyan-500 to-indigo-500 dark:from-cyan-400 dark:via-indigo-500 dark:to-purple-600 rounded-full w-14 h-14 hover:bg-blue-800 outline outline-2 dark:outline-white outline-black">
             <svg xmlns="http://www.w3.org/2000/svg" id="night" class="" width="20" height="20" fill="currentColor"
                 class="bi bi-moon-stars" viewBox="0 0 16 16">
                 <path

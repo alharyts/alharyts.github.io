@@ -1,85 +1,146 @@
-let stars = document.getElementById('stars');
-let moon = document.getElementById('moons');
-let mountains_behind = document.getElementById('mountains_behind');
-let text = document.getElementById('text');
-let btn = document.getElementById('btn');
-let mountains_front = document.getElementById('mountains_front');
-let header = document.querySelector('header')
-
-window.addEventListener('scroll', function(){
-    let value = window.scrollY;
-    stars.style.left = value * 0.25 + 'px';
-    moon.style.top = value * 1 + 'px';
-    mountains_behind.style.top = value * 0.5 + 'px';
-    mountains_front.style.top = value * 0 + 'px';
-    text.style.marginRight = value * 4 + 'px';
-    text.style.marginTop = value * 1.5 + 'px';
-    btn.style.marginTop = value * 1.5 + 'px';
-    header.style.top = value * 0.5 + 'px';
-});
-
-const figure = document.getElementById('myQuotes');
-    
-window.addEventListener('scroll', function() {
-    if (window.scrollY === 0) {
-        figure.style.display = "block";
-    } else {
-        figure.style.display = "none";
-    }
-});
-
 // dark mode
-const html = document.querySelector('html');
-const rightBtn = document.querySelector('#rightBtn');
-const sunny = document.querySelector('#sun');
-const night = document.querySelector('#night');
-const afternoon = document.querySelector('#afternoon');
-const portfolio = document.querySelector('#portfolio');
-rightBtn.addEventListener('click', function(e) {
-  if (html.classList.contains('dark')) {
-    html.classList.remove('dark');
-    afternoon.classList.remove('hidden');
-    night.classList.add('hidden');
-    localStorage.theme = 'light';
-    portfolio.classList.remove('stars');
-    portfolio.classList.add('afternoon');
-    sunny.classList.add('sunny');
-    mountains_behind.classList.add('mountains_behind');
-    mountains_front.classList.add('mountains_front');
+const html = document.querySelector("html");
+const rightBtn = document.querySelector("#rightBtn");
+const portfolio = document.querySelector("#portfolio");
+const night = document.querySelector("#night");
+const afternoon = document.querySelector("#afternoon");
+
+rightBtn.addEventListener("click", function (e) {
+  if (html.classList.contains("dark")) {
+    html.classList.remove("dark");
+    afternoon.classList.remove("hidden");
+    night.classList.add("hidden");
+    localStorage.theme = "light";
   } else {
-    html.classList.add('dark');
-    localStorage.theme = 'dark';
-    afternoon.classList.add('hidden');
-    night.classList.remove('hidden');
-    portfolio.classList.add('stars');
-    portfolio.classList.remove('afternoon');
-    sunny.classList.remove('sunny');
-    mountains_behind.classList.remove('mountains_behind');
-    mountains_front.classList.remove('mountains_front');
+    html.classList.add("dark");
+    afternoon.classList.add("hidden");
+    night.classList.remove("hidden");
+    localStorage.theme = "dark";
   }
 });
 
 const theme = localStorage.theme;
-if (theme === 'dark') {
-  afternoon.classList.add('hidden');
-  night.classList.remove('hidden');
-  html.classList.add('dark');
-  portfolio.classList.add('stars');
-  portfolio.classList.remove('afternoon');
-  moons.checked = true;
-  sunny.classList.remove('sunny');
-  mountains_behind.classList.remove('mountains_behind');
-  mountains_front.classList.remove('mountains_front');
+
+if (theme === "dark") {
+  afternoon.classList.add("hidden");
+  night.classList.remove("hidden");
+  html.classList.add("dark");
 } else {
-  afternoon.classList.remove('hidden');
-  night.classList.add('hidden');
-  html.classList.remove('dark');
-  portfolio.classList.remove('stars');
-  portfolio.classList.add('afternoon');
-    moons.checked = false;
-    sunny.classList.add('sunny');
-    mountains_behind.classList.add('mountains_behind');
-    mountains_front.classList.add('mountains_front');
+  afternoon.classList.remove("hidden");
+  night.classList.add("hidden");
+  html.classList.remove("dark");
+}
+
+const experience = document.getElementById("btn-experience");
+const education = document.getElementById("btn-education");
+const barExperience = document.getElementById("bar-experience");
+const barEducation = document.getElementById("bar-education");
+
+experience.addEventListener("click", function () {
+  experience.classList.add(
+    "bg-emerald-600",
+    "dark:bg-indigo-500",
+    "text-white"
+  );
+  education.classList.remove(
+    "bg-emerald-600",
+    "dark:bg-indigo-500",
+    "text-white"
+  );
+  education.classList.add("text-black");
+  barEducation.classList.add("hidden");
+  barExperience.classList.remove("hidden");
+});
+
+education.addEventListener("click", function () {
+  education.classList.add("bg-emerald-600", "dark:bg-indigo-500", "text-white");
+  education.classList.remove("text-black");
+  experience.classList.remove(
+    "bg-emerald-600",
+    "dark:bg-indigo-500",
+    "text-white"
+  );
+  experience.classList.add("text-black");
+  barEducation.classList.remove("hidden");
+  barExperience.classList.add("hidden");
+});
+
+// typing text
+const texts = ["Back-end", "Front-end", "Fullstack"];
+const typedText = document.getElementById("typed-text");
+
+function typeAnimation() {
+  let textIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function type() {
+    const currentText = texts[textIndex];
+
+    if (charIndex < currentText.length && !isDeleting) {
+      typedText.textContent += currentText.charAt(charIndex);
+      charIndex++;
+    } else if (charIndex > 0 && isDeleting) {
+      typedText.textContent = currentText.substring(0, charIndex - 1);
+      charIndex--;
+    } else {
+      isDeleting = !isDeleting;
+    }
+
+    const typingSpeed = isDeleting ? 150 : 250;
+    const delay = isDeleting ? 500 : 1000;
+
+    if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      textIndex = (textIndex + 1) % texts.length;
+      setTimeout(type, delay);
+    } else if (!isDeleting && charIndex === currentText.length) {
+      isDeleting = true;
+      setTimeout(type, delay);
+    } else {
+      setTimeout(type, typingSpeed);
+    }
   }
+
+  type();
+}
+
+typeAnimation();
+
+// gallery
+const displayPct = document.getElementById("display-pct");
+const picture = document.querySelectorAll(".picture");
+
+displayPct.onclick = function(){
+  displayPct.requestFullscreen();
+}
+
+picture.forEach(function (pct) {
+  pct.addEventListener("click", function (e) {
+    const activeElement = document.querySelector(".picture.active");
+
+    if (activeElement) {
+      activeElement.classList.remove("active");
+    }
+
+    e.target.classList.add("active");
+    displayPct.setAttribute("src", e.target.src);
+  });
+});
+
+// nav toggle
+const toggleTarget = document.getElementById('toggleTarget');
+const btnToggle = document.getElementById('nav-toggle');
+
+btnToggle.addEventListener('click', function(){
+  toggleTarget.classList.toggle('hidden');
+});
+
+document.addEventListener('click', function(event) {
+  if (!event.target.closest('#nav-toggle')) {
+    toggleTarget.classList.add('hidden');
+  }
+});
+
 
 
