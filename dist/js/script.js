@@ -66,7 +66,7 @@ education.addEventListener("click", function () {
 });
 
 // typing text
-const texts = ["Back-end", "Front-end", "Fullstack"];
+const texts = ["BackEnd", "FrontEnd", "FullStack"];
 const typedText = document.getElementById("typed-text");
 
 function typeAnimation() {

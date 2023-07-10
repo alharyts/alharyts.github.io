@@ -99,3 +99,19 @@
 .active{
   @apply shadow-lg shadow-slate-500;
 }
+
+.animated-element {
+  animation: slide-up 1s ease-in-out infinite;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(100%);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
