@@ -134,13 +134,18 @@ const btnToggle = document.getElementById('nav-toggle');
 
 btnToggle.addEventListener('click', function(){
   toggleTarget.classList.toggle('hidden');
+  toggleTarget.classList.toggle('bg-white');
+  toggleTarget.classList.remove('bg-transparent');
 });
 
 document.addEventListener('click', function(event) {
   if (!event.target.closest('#nav-toggle')) {
     toggleTarget.classList.add('hidden');
+    toggleTarget.classList.remove('bg-white');
+    toggleTarget.classList.remove('bg-transparent');
   }
 });
+
 
 
 
